@@ -1,4 +1,4 @@
-﻿namespace Produtos_Agrícolas
+﻿namespace Produtos_Agrícolas.Telas
 {
     partial class Menu
     {
@@ -28,56 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnCadastro = new Button();
-            btnEstoque = new Button();
-            btnVender = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            menuStrip1 = new MenuStrip();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
+            estoqueToolStripMenuItem = new ToolStripMenuItem();
+            vendaToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // btnCadastro
+            // menuStrip1
             // 
-            btnCadastro.Location = new Point(166, 46);
-            btnCadastro.Name = "btnCadastro";
-            btnCadastro.Size = new Size(75, 23);
-            btnCadastro.TabIndex = 0;
-            btnCadastro.Text = "Cadastro";
-            btnCadastro.UseVisualStyleBackColor = true;
-            btnCadastro.Click += btnCadastro_Click;
+            menuStrip1.Font = new Font("Segoe UI", 11F);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1264, 28);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // btnEstoque
+            // cadastroToolStripMenuItem
             // 
-            btnEstoque.Location = new Point(166, 75);
-            btnEstoque.Name = "btnEstoque";
-            btnEstoque.Size = new Size(75, 23);
-            btnEstoque.TabIndex = 1;
-            btnEstoque.Text = "Estoque";
-            btnEstoque.UseVisualStyleBackColor = true;
+            cadastroToolStripMenuItem.Image = Properties.Resources.Cadastro;
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(96, 24);
+            cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
-            // btnVender
+            // estoqueToolStripMenuItem
             // 
-            btnVender.Location = new Point(166, 104);
-            btnVender.Name = "btnVender";
-            btnVender.Size = new Size(75, 23);
-            btnVender.TabIndex = 2;
-            btnVender.Text = "Vender";
-            btnVender.UseVisualStyleBackColor = true;
+            estoqueToolStripMenuItem.Image = Properties.Resources.Estoque;
+            estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            estoqueToolStripMenuItem.Size = new Size(90, 24);
+            estoqueToolStripMenuItem.Text = "Estoque";
+            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
+            // 
+            // vendaToolStripMenuItem
+            // 
+            vendaToolStripMenuItem.Image = Properties.Resources.Venda;
+            vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            vendaToolStripMenuItem.Size = new Size(78, 24);
+            vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Image = (Image)resources.GetObject("sairToolStripMenuItem.Image");
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(62, 24);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnVender);
-            Controls.Add(btnEstoque);
-            Controls.Add(btnCadastro);
+            ClientSize = new Size(1264, 681);
+            Controls.Add(menuStrip1);
             Name = "Menu";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button btnCadastro;
-        private Button btnEstoque;
-        private Button btnVender;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem estoqueToolStripMenuItem;
+        private ToolStripMenuItem vendaToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

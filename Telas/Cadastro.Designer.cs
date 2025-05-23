@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             txtNome = new TextBox();
             txtCategoria = new TextBox();
             txtQuantidade = new TextBox();
@@ -38,25 +39,31 @@
             lblPreco = new Label();
             btnSalvar = new Button();
             Estoque = new Button();
+            menuStrip1 = new MenuStrip();
+            cadastroToolStripMenuItem = new ToolStripMenuItem();
+            estoqueToolStripMenuItem = new ToolStripMenuItem();
+            vendaToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(91, 12);
+            txtNome.Location = new Point(91, 68);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(245, 23);
             txtNome.TabIndex = 0;
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(91, 41);
+            txtCategoria.Location = new Point(91, 97);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(245, 23);
             txtCategoria.TabIndex = 1;
             // 
             // txtQuantidade
             // 
-            txtQuantidade.Location = new Point(91, 70);
+            txtQuantidade.Location = new Point(91, 126);
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.Size = new Size(245, 23);
             txtQuantidade.TabIndex = 2;
@@ -64,7 +71,7 @@
             // 
             // txtPreco
             // 
-            txtPreco.Location = new Point(91, 99);
+            txtPreco.Location = new Point(91, 155);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(245, 23);
             txtPreco.TabIndex = 3;
@@ -73,7 +80,7 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(12, 15);
+            lblNome.Location = new Point(12, 71);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(40, 15);
             lblNome.TabIndex = 4;
@@ -82,7 +89,7 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(12, 44);
+            lblCategoria.Location = new Point(12, 100);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(58, 15);
             lblCategoria.TabIndex = 5;
@@ -91,7 +98,7 @@
             // lblQuantidade
             // 
             lblQuantidade.AutoSize = true;
-            lblQuantidade.Location = new Point(12, 73);
+            lblQuantidade.Location = new Point(12, 129);
             lblQuantidade.Name = "lblQuantidade";
             lblQuantidade.Size = new Size(69, 15);
             lblQuantidade.TabIndex = 6;
@@ -100,7 +107,7 @@
             // lblPreco
             // 
             lblPreco.AutoSize = true;
-            lblPreco.Location = new Point(12, 102);
+            lblPreco.Location = new Point(12, 158);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(37, 15);
             lblPreco.TabIndex = 7;
@@ -108,7 +115,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(262, 128);
+            btnSalvar.Location = new Point(262, 184);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 8;
@@ -118,18 +125,58 @@
             // 
             // Estoque
             // 
-            Estoque.Location = new Point(261, 157);
+            Estoque.Location = new Point(261, 213);
             Estoque.Name = "Estoque";
             Estoque.Size = new Size(75, 23);
             Estoque.TabIndex = 9;
             Estoque.Text = "Estoque";
             Estoque.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Font = new Font("Segoe UI", 11F);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1264, 28);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            cadastroToolStripMenuItem.Image = Properties.Resources.Cadastro;
+            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            cadastroToolStripMenuItem.Size = new Size(96, 24);
+            cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
+            // 
+            // estoqueToolStripMenuItem
+            // 
+            estoqueToolStripMenuItem.Image = Properties.Resources.Estoque;
+            estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            estoqueToolStripMenuItem.Size = new Size(90, 24);
+            estoqueToolStripMenuItem.Text = "Estoque";
+            // 
+            // vendaToolStripMenuItem
+            // 
+            vendaToolStripMenuItem.Image = Properties.Resources.Venda;
+            vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            vendaToolStripMenuItem.Size = new Size(78, 24);
+            vendaToolStripMenuItem.Text = "Venda";
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Image = (Image)resources.GetObject("sairToolStripMenuItem.Image");
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(62, 24);
+            sairToolStripMenuItem.Text = "Sair";
+            // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(349, 189);
+            ClientSize = new Size(1264, 681);
+            Controls.Add(menuStrip1);
             Controls.Add(Estoque);
             Controls.Add(btnSalvar);
             Controls.Add(lblPreco);
@@ -141,7 +188,12 @@
             Controls.Add(txtCategoria);
             Controls.Add(txtNome);
             Name = "Cadastro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";
+            FormClosed += Cadastro_FormClosed;
+            Load += Cadastro_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +210,10 @@
         private Label lblPreco;
         private Button btnSalvar;
         private Button Estoque;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem estoqueToolStripMenuItem;
+        private ToolStripMenuItem vendaToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

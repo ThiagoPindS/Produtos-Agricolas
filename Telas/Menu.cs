@@ -1,6 +1,7 @@
 using Produtos_Agrícolas.Telas;
+using Produtos_Agrícolas.Classes;
 
-namespace Produtos_Agrícolas
+namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
     {
@@ -9,15 +10,28 @@ namespace Produtos_Agrícolas
             InitializeComponent();
         }
 
-        private void btnCadastro_Click(object sender, EventArgs e)
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cadastro cadastro = new Cadastro();
+            Navegacao.cadastro.ShowDialog();
+        }
 
-            this.Hide();
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Navegacao.estoque.ShowDialog();
+        }
 
-            cadastro.ShowDialog();
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Navegacao.venda.ShowDialog();
+        }
 
-            this.Show();
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

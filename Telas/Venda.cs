@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Produtos_Agrícolas.Classes;
 
 namespace Produtos_Agrícolas.Telas
 {
-    public partial class Estoque : Form
+    public partial class Venda : Form
     {
-        public Estoque()
+        public Venda()
         {
             InitializeComponent();
-        }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Navegacao.cadastro.ShowDialog();
         }
     }
 }

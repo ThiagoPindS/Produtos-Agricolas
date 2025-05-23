@@ -15,7 +15,6 @@ C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produt
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos-Agrícolas.genruntimeconfig.cache
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\ref\Produtos-Agrícolas.dll
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Cadastro.resources
-C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Menu.resources
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos-Agrícolas.csproj.AssemblyReference.cache
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\bin\Debug\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
@@ -43,3 +42,7 @@ C:\Users\Thiago\source\repos\Produtos-Agrícolas\bin\Debug\net8.0-windows\runtim
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos.AC5C7E79.Up2Date
+C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Properties.Resources.resources
+C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Estoque.resources
+C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Menu.resources
+C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Venda.resources

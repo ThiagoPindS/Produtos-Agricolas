@@ -1,6 +1,6 @@
 ﻿namespace Produtos_Agrícolas.Telas
 {
-    partial class Estoque
+    partial class Venda
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estoque));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venda));
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
@@ -44,7 +44,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1264, 28);
-            menuStrip1.TabIndex = 0;
+            menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
@@ -53,7 +53,6 @@
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(96, 24);
             cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // estoqueToolStripMenuItem
             // 
@@ -76,16 +75,15 @@
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
             // 
-            // Estoque
+            // Venda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
             Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "Estoque";
+            Name = "Venda";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Estoque";
+            Text = "Venda";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
