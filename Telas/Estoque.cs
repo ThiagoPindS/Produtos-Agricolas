@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Produtos_Agrícolas.Classes;
-
-namespace Produtos_Agrícolas.Telas
+﻿namespace Produtos_Agrícolas.Telas
 {
     public partial class Estoque : Form
     {
+        public static Estoque estoque = new Estoque();
+
         public Estoque()
         {
             InitializeComponent();
@@ -20,7 +11,37 @@ namespace Produtos_Agrícolas.Telas
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Navegacao.cadastro.ShowDialog();
+            this.Hide();
+            Cadastro.cadastro.Show();
+        }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Você já está na tela de estoque", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Venda.venda.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Estoque_VisibleChanged(object sender, EventArgs e)
+        {
+            estoque.Location = new Point(
+                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
+             );
         }
     }
 }
+

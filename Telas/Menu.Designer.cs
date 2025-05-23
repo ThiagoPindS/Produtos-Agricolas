@@ -88,6 +88,7 @@
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
+            VisibleChanged += Menu_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

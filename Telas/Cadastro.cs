@@ -4,6 +4,8 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Cadastro : Form
     {
+        public static Cadastro cadastro = new Cadastro();
+
         public Cadastro()
         {
             InitializeComponent();
@@ -16,18 +18,36 @@ namespace Produtos_Agrícolas.Telas
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Você já está na tela de cadastro");
+            MessageBox.Show("Você já está na tela de cadastro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void Cadastro_Load(object sender, EventArgs e)
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Navegacao.menu.Hide();
-            Navegacao.estoque.Close();
+            this.Hide();
+            Estoque.estoque.Show();
         }
 
-        private void Cadastro_FormClosed(object sender, FormClosedEventArgs e)
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Navegacao.menu.Show();
+            this.Hide();
+            Venda.venda.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void Cadastro_VisibleChanged(object sender, EventArgs e)
+        {
+            cadastro.Location = new Point(
+                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
+             );
         }
     }
 }

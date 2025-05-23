@@ -53,6 +53,7 @@
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(96, 24);
             cadastroToolStripMenuItem.Text = "Cadastro";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click_1;
             // 
             // estoqueToolStripMenuItem
             // 
@@ -60,6 +61,7 @@
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(90, 24);
             estoqueToolStripMenuItem.Text = "Estoque";
+            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click_1;
             // 
             // vendaToolStripMenuItem
             // 
@@ -67,6 +69,7 @@
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(78, 24);
             vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click_1;
             // 
             // sairToolStripMenuItem
             // 
@@ -74,6 +77,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click_1;
             // 
             // Venda
             // 
@@ -84,6 +88,7 @@
             Name = "Venda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Venda";
+            VisibleChanged += Venda_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

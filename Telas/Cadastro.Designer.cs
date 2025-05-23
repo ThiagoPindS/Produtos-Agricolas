@@ -38,7 +38,6 @@
             lblQuantidade = new Label();
             lblPreco = new Label();
             btnSalvar = new Button();
-            Estoque = new Button();
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
@@ -123,15 +122,6 @@
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // Estoque
-            // 
-            Estoque.Location = new Point(261, 213);
-            Estoque.Name = "Estoque";
-            Estoque.Size = new Size(75, 23);
-            Estoque.TabIndex = 9;
-            Estoque.Text = "Estoque";
-            Estoque.UseVisualStyleBackColor = true;
-            // 
             // menuStrip1
             // 
             menuStrip1.Font = new Font("Segoe UI", 11F);
@@ -156,6 +146,7 @@
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(90, 24);
             estoqueToolStripMenuItem.Text = "Estoque";
+            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
             // 
             // vendaToolStripMenuItem
             // 
@@ -163,6 +154,7 @@
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(78, 24);
             vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -170,6 +162,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // Cadastro
             // 
@@ -177,7 +170,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
             Controls.Add(menuStrip1);
-            Controls.Add(Estoque);
             Controls.Add(btnSalvar);
             Controls.Add(lblPreco);
             Controls.Add(lblQuantidade);
@@ -190,8 +182,7 @@
             Name = "Cadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";
-            FormClosed += Cadastro_FormClosed;
-            Load += Cadastro_Load;
+            VisibleChanged += Cadastro_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -209,7 +200,6 @@
         private Label lblQuantidade;
         private Label lblPreco;
         private Button btnSalvar;
-        private Button Estoque;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem estoqueToolStripMenuItem;

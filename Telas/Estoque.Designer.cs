@@ -61,6 +61,7 @@
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(90, 24);
             estoqueToolStripMenuItem.Text = "Estoque";
+            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
             // 
             // vendaToolStripMenuItem
             // 
@@ -68,6 +69,7 @@
             vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
             vendaToolStripMenuItem.Size = new Size(78, 24);
             vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -75,6 +77,7 @@
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // Estoque
             // 
@@ -86,6 +89,7 @@
             Name = "Estoque";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
+            VisibleChanged += Estoque_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
