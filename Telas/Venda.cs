@@ -12,13 +12,13 @@
         private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro.cadastro.Show();
+            Cadastro.cadastro.ShowDialog();
         }
 
         private void estoqueToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Estoque.estoque.Show();
+            Estoque.estoque.ShowDialog();
         }
 
         private void vendaToolStripMenuItem_Click_1(object sender, EventArgs e)

@@ -28,24 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estoque));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
+            pesquisarToolStripMenuItem = new ToolStripMenuItem();
+            geralToolStripMenuItem = new ToolStripMenuItem();
+            irrigaçãoToolStripMenuItem = new ToolStripMenuItem();
+            adubaçãoToolStripMenuItem = new ToolStripMenuItem();
+            controleDePragasToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            dgvEstoque = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.Font = new Font("Segoe UI", 11F);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { pesquisarToolStripMenuItem, cadastroToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1264, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
+            // 
+            // pesquisarToolStripMenuItem
+            // 
+            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { geralToolStripMenuItem, irrigaçãoToolStripMenuItem, adubaçãoToolStripMenuItem, controleDePragasToolStripMenuItem });
+            pesquisarToolStripMenuItem.Image = Properties.Resources.Pesquisar;
+            pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
+            pesquisarToolStripMenuItem.Size = new Size(98, 24);
+            pesquisarToolStripMenuItem.Text = "Pesquisar";
+            // 
+            // geralToolStripMenuItem
+            // 
+            geralToolStripMenuItem.Image = Properties.Resources.Geral;
+            geralToolStripMenuItem.Name = "geralToolStripMenuItem";
+            geralToolStripMenuItem.Size = new Size(205, 24);
+            geralToolStripMenuItem.Text = "Geral";
+            // 
+            // irrigaçãoToolStripMenuItem
+            // 
+            irrigaçãoToolStripMenuItem.Image = Properties.Resources.Irrigação;
+            irrigaçãoToolStripMenuItem.Name = "irrigaçãoToolStripMenuItem";
+            irrigaçãoToolStripMenuItem.Size = new Size(205, 24);
+            irrigaçãoToolStripMenuItem.Text = "Irrigação";
+            // 
+            // adubaçãoToolStripMenuItem
+            // 
+            adubaçãoToolStripMenuItem.Image = Properties.Resources.Adubação;
+            adubaçãoToolStripMenuItem.Name = "adubaçãoToolStripMenuItem";
+            adubaçãoToolStripMenuItem.Size = new Size(205, 24);
+            adubaçãoToolStripMenuItem.Text = "Adubação";
+            // 
+            // controleDePragasToolStripMenuItem
+            // 
+            controleDePragasToolStripMenuItem.Image = Properties.Resources.Controle_de_pragas;
+            controleDePragasToolStripMenuItem.Name = "controleDePragasToolStripMenuItem";
+            controleDePragasToolStripMenuItem.Size = new Size(205, 24);
+            controleDePragasToolStripMenuItem.Text = "Controle de pragas";
             // 
             // cadastroToolStripMenuItem
             // 
@@ -73,25 +118,70 @@
             // 
             // sairToolStripMenuItem
             // 
-            sairToolStripMenuItem.Image = (Image)resources.GetObject("sairToolStripMenuItem.Image");
+            sairToolStripMenuItem.Image = Properties.Resources.Sair;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
+            // dgvEstoque
+            // 
+            dgvEstoque.AllowUserToAddRows = false;
+            dgvEstoque.AllowUserToDeleteRows = false;
+            dgvEstoque.AllowUserToOrderColumns = true;
+            dgvEstoque.AllowUserToResizeColumns = false;
+            dgvEstoque.AllowUserToResizeRows = false;
+            dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvEstoque.ColumnHeadersHeight = 28;
+            dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvEstoque.Location = new Point(0, 31);
+            dgvEstoque.Name = "dgvEstoque";
+            dgvEstoque.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvEstoque.RowHeadersVisible = false;
+            dgvEstoque.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvEstoque.Size = new Size(1264, 650);
+            dgvEstoque.TabIndex = 1;
             // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
+            Controls.Add(dgvEstoque);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Estoque";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
+            Load += Estoque_Load;
             VisibleChanged += Estoque_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvEstoque).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,5 +193,11 @@
         private ToolStripMenuItem estoqueToolStripMenuItem;
         private ToolStripMenuItem vendaToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private DataGridView dgvEstoque;
+        private ToolStripMenuItem pesquisarToolStripMenuItem;
+        private ToolStripMenuItem geralToolStripMenuItem;
+        private ToolStripMenuItem irrigaçãoToolStripMenuItem;
+        private ToolStripMenuItem adubaçãoToolStripMenuItem;
+        private ToolStripMenuItem controleDePragasToolStripMenuItem;
     }
 }

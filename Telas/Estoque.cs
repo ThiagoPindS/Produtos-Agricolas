@@ -1,4 +1,6 @@
-﻿namespace Produtos_Agrícolas.Telas
+﻿using Produtos_Agrícolas.Classes;
+
+namespace Produtos_Agrícolas.Telas
 {
     public partial class Estoque : Form
     {
@@ -12,7 +14,7 @@
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro.cadastro.Show();
+            Cadastro.cadastro.ShowDialog();
         }
 
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -23,7 +25,7 @@
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venda.venda.Show();
+            Venda.venda.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +43,13 @@
                 (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
              );
+        }
+
+        private void Estoque_Load(object sender, EventArgs e)
+        {
+            ProdutoService.CarregarProdutos();
+
+            dgvEstoque.DataSource = ProdutoService.Produtos;
         }
     }
 }

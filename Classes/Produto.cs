@@ -102,5 +102,14 @@ namespace Produtos_Agrícolas.Classes
             Quantidade = quantidade;
             Preco = preco;
         }
+
+        public Produto(int id, string nome, string categoria, int quantidade, double preco)
+        {
+            Id = Id;
+            Nome = nome;
+            Categoria = categoria;
+            Quantidade = quantidade;
+            Preco = preco;
+        }
     }
 }
