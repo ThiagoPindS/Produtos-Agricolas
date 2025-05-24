@@ -13,7 +13,7 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Produto.CadastrarProduto(new Produto(txtNome.Text, txtCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
+            ProdutoService.CadastrarProduto(new Produto(txtNome.Text, txtCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
