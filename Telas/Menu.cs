@@ -2,8 +2,6 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
     {
-        public static Menu menu = new Menu();
-
         public Menu()
         {
             InitializeComponent();
@@ -36,7 +34,7 @@ namespace Produtos_Agrícolas.Telas
             {
                 venda.ShowDialog();
             }
-            this.Show(); Venda.venda.ShowDialog();
+            this.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

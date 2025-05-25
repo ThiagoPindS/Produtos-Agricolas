@@ -9,31 +9,6 @@ namespace Produtos_Agrícolas.Telas
             InitializeComponent();
         }
 
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (Cadastro cadastro = new Cadastro())
-            {
-                cadastro.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Você já está na tela de estoque", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (Venda venda = new Venda())
-            {
-                venda.ShowDialog();
-            }
-            this.Show(); Venda.venda.ShowDialog();
-        }
-
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -46,7 +21,7 @@ namespace Produtos_Agrícolas.Telas
         private void Estoque_Load(object sender, EventArgs e)
         {
             ProdutoService.CarregarProdutos();
-            
+
             AtualizarDataGridView();
         }
 
@@ -83,6 +58,11 @@ namespace Produtos_Agrícolas.Telas
             dgvEstoque.DataSource = "null";
 
             dgvEstoque.DataSource = ProdutoService.Produtos;
+        }
+
+        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -38,11 +38,9 @@
             lblPreco = new Label();
             btnSalvar = new Button();
             menuStrip1 = new MenuStrip();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            estoqueToolStripMenuItem = new ToolStripMenuItem();
-            vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             cmbCategoria = new ComboBox();
+            voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -118,36 +116,12 @@
             // menuStrip1
             // 
             menuStrip1.Font = new Font("Segoe UI", 11F);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, estoqueToolStripMenuItem, vendaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { voltarAoMenuToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1264, 28);
             menuStrip1.TabIndex = 10;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.Image = Properties.Resources.Cadastro;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(96, 24);
-            cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // estoqueToolStripMenuItem
-            // 
-            estoqueToolStripMenuItem.Image = Properties.Resources.Estoque;
-            estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(90, 24);
-            estoqueToolStripMenuItem.Text = "Estoque";
-            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
-            // 
-            // vendaToolStripMenuItem
-            // 
-            vendaToolStripMenuItem.Image = Properties.Resources.Venda;
-            vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            vendaToolStripMenuItem.Size = new Size(78, 24);
-            vendaToolStripMenuItem.Text = "Venda";
-            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -165,6 +139,14 @@
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(245, 23);
             cmbCategoria.TabIndex = 1;
+            // 
+            // voltarAoMenuToolStripMenuItem
+            // 
+            voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
+            voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
+            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
+            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
             // 
             // Cadastro
             // 
@@ -201,10 +183,8 @@
         private Label lblPreco;
         private Button btnSalvar;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem estoqueToolStripMenuItem;
-        private ToolStripMenuItem vendaToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ComboBox cmbCategoria;
+        private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
     }
 }

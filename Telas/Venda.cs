@@ -2,36 +2,9 @@
 {
     public partial class Venda : Form
     {
-        public static Venda venda = new Venda();
-
         public Venda()
         {
             InitializeComponent();
-        }
-
-        private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (Cadastro cadastro = new Cadastro())
-            {
-                cadastro.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void estoqueToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (Estoque estoque = new Estoque())
-            {
-                estoque.ShowDialog();
-            }
-            this.Show();
-        }
-
-        private void vendaToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Você já está na tela de venda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -41,6 +14,11 @@
             {
                 Application.Exit();
             }
+        }
+
+        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
