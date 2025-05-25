@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             txtNome = new TextBox();
-            txtCategoria = new TextBox();
             txtQuantidade = new TextBox();
             txtPreco = new TextBox();
             lblNome = new Label();
@@ -43,6 +42,7 @@
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            cmbCategoria = new ComboBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,13 +52,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(245, 23);
             txtNome.TabIndex = 0;
-            // 
-            // txtCategoria
-            // 
-            txtCategoria.Location = new Point(91, 97);
-            txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(245, 23);
-            txtCategoria.TabIndex = 1;
             // 
             // txtQuantidade
             // 
@@ -164,11 +157,21 @@
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
+            // cmbCategoria
+            // 
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Items.AddRange(new object[] { "Grãos", "Hortaliças", "Frutas" });
+            cmbCategoria.Location = new Point(91, 97);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(245, 23);
+            cmbCategoria.TabIndex = 11;
+            // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
+            Controls.Add(cmbCategoria);
             Controls.Add(menuStrip1);
             Controls.Add(btnSalvar);
             Controls.Add(lblPreco);
@@ -177,7 +180,6 @@
             Controls.Add(lblNome);
             Controls.Add(txtPreco);
             Controls.Add(txtQuantidade);
-            Controls.Add(txtCategoria);
             Controls.Add(txtNome);
             Name = "Cadastro";
             StartPosition = FormStartPosition.CenterScreen;
@@ -192,7 +194,6 @@
         #endregion
 
         private TextBox txtNome;
-        private TextBox txtCategoria;
         private TextBox txtQuantidade;
         private TextBox txtPreco;
         private Label lblNome;
@@ -205,5 +206,6 @@
         private ToolStripMenuItem estoqueToolStripMenuItem;
         private ToolStripMenuItem vendaToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private ComboBox cmbCategoria;
     }
 }

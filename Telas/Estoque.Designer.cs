@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             pesquisarToolStripMenuItem = new ToolStripMenuItem();
-            geralToolStripMenuItem = new ToolStripMenuItem();
-            irrigaçãoToolStripMenuItem = new ToolStripMenuItem();
-            adubaçãoToolStripMenuItem = new ToolStripMenuItem();
-            controleDePragasToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvEstoque = new DataGridView();
+            grãosToolStripMenuItem = new ToolStripMenuItem();
+            hortaliçasToolStripMenuItem = new ToolStripMenuItem();
+            frutasToolStripMenuItem = new ToolStripMenuItem();
+            vegetaisToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
@@ -58,39 +58,11 @@
             // 
             // pesquisarToolStripMenuItem
             // 
-            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { geralToolStripMenuItem, irrigaçãoToolStripMenuItem, adubaçãoToolStripMenuItem, controleDePragasToolStripMenuItem });
-            pesquisarToolStripMenuItem.Image = Properties.Resources.Pesquisar;
+            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frutasToolStripMenuItem, grãosToolStripMenuItem, hortaliçasToolStripMenuItem, vegetaisToolStripMenuItem });
+            pesquisarToolStripMenuItem.Image = Properties.Resources.Filtrar;
             pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
-            pesquisarToolStripMenuItem.Size = new Size(98, 24);
-            pesquisarToolStripMenuItem.Text = "Pesquisar";
-            // 
-            // geralToolStripMenuItem
-            // 
-            geralToolStripMenuItem.Image = Properties.Resources.Geral;
-            geralToolStripMenuItem.Name = "geralToolStripMenuItem";
-            geralToolStripMenuItem.Size = new Size(205, 24);
-            geralToolStripMenuItem.Text = "Geral";
-            // 
-            // irrigaçãoToolStripMenuItem
-            // 
-            irrigaçãoToolStripMenuItem.Image = Properties.Resources.Irrigação;
-            irrigaçãoToolStripMenuItem.Name = "irrigaçãoToolStripMenuItem";
-            irrigaçãoToolStripMenuItem.Size = new Size(205, 24);
-            irrigaçãoToolStripMenuItem.Text = "Irrigação";
-            // 
-            // adubaçãoToolStripMenuItem
-            // 
-            adubaçãoToolStripMenuItem.Image = Properties.Resources.Adubação;
-            adubaçãoToolStripMenuItem.Name = "adubaçãoToolStripMenuItem";
-            adubaçãoToolStripMenuItem.Size = new Size(205, 24);
-            adubaçãoToolStripMenuItem.Text = "Adubação";
-            // 
-            // controleDePragasToolStripMenuItem
-            // 
-            controleDePragasToolStripMenuItem.Image = Properties.Resources.Controle_de_pragas;
-            controleDePragasToolStripMenuItem.Name = "controleDePragasToolStripMenuItem";
-            controleDePragasToolStripMenuItem.Size = new Size(205, 24);
-            controleDePragasToolStripMenuItem.Text = "Controle de pragas";
+            pesquisarToolStripMenuItem.Size = new Size(75, 24);
+            pesquisarToolStripMenuItem.Text = "Filtrar";
             // 
             // cadastroToolStripMenuItem
             // 
@@ -132,39 +104,67 @@
             dgvEstoque.AllowUserToResizeColumns = false;
             dgvEstoque.AllowUserToResizeRows = false;
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Control;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             dgvEstoque.ColumnHeadersHeight = 28;
             dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Window;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle11;
             dgvEstoque.Location = new Point(0, 31);
             dgvEstoque.Name = "dgvEstoque";
             dgvEstoque.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgvEstoque.RowHeadersVisible = false;
             dgvEstoque.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvEstoque.Size = new Size(1264, 650);
             dgvEstoque.TabIndex = 1;
+            // 
+            // grãosToolStripMenuItem
+            // 
+            grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
+            grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
+            grãosToolStripMenuItem.Size = new Size(145, 24);
+            grãosToolStripMenuItem.Text = "Grãos";
+            // 
+            // hortaliçasToolStripMenuItem
+            // 
+            hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
+            hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
+            hortaliçasToolStripMenuItem.Size = new Size(145, 24);
+            hortaliçasToolStripMenuItem.Text = "Hortaliças";
+            // 
+            // frutasToolStripMenuItem
+            // 
+            frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
+            frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
+            frutasToolStripMenuItem.Size = new Size(145, 24);
+            frutasToolStripMenuItem.Text = "Frutas";
+            // 
+            // vegetaisToolStripMenuItem
+            // 
+            vegetaisToolStripMenuItem.Image = Properties.Resources.Vegetais;
+            vegetaisToolStripMenuItem.Name = "vegetaisToolStripMenuItem";
+            vegetaisToolStripMenuItem.Size = new Size(145, 24);
+            vegetaisToolStripMenuItem.Text = "Vegetais";
             // 
             // Estoque
             // 
@@ -195,9 +195,9 @@
         private ToolStripMenuItem sairToolStripMenuItem;
         private DataGridView dgvEstoque;
         private ToolStripMenuItem pesquisarToolStripMenuItem;
-        private ToolStripMenuItem geralToolStripMenuItem;
-        private ToolStripMenuItem irrigaçãoToolStripMenuItem;
-        private ToolStripMenuItem adubaçãoToolStripMenuItem;
-        private ToolStripMenuItem controleDePragasToolStripMenuItem;
+        private ToolStripMenuItem grãosToolStripMenuItem;
+        private ToolStripMenuItem hortaliçasToolStripMenuItem;
+        private ToolStripMenuItem frutasToolStripMenuItem;
+        private ToolStripMenuItem vegetaisToolStripMenuItem;
     }
 }

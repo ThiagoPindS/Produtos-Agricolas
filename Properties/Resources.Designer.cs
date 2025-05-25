@@ -63,29 +63,9 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Adubação {
-            get {
-                object obj = ResourceManager.GetObject("Adubação", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Cadastro {
             get {
                 object obj = ResourceManager.GetObject("Cadastro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Controle_de_pragas {
-            get {
-                object obj = ResourceManager.GetObject("Controle de pragas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +83,9 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Geral {
+        internal static System.Drawing.Bitmap Filtrar {
             get {
-                object obj = ResourceManager.GetObject("Geral", resourceCulture);
+                object obj = ResourceManager.GetObject("Filtrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,29 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Irrigação {
+        internal static System.Drawing.Bitmap Frutas {
             get {
-                object obj = ResourceManager.GetObject("Irrigação", resourceCulture);
+                object obj = ResourceManager.GetObject("Frutas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grãos {
+            get {
+                object obj = ResourceManager.GetObject("Grãos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hortaliças {
+            get {
+                object obj = ResourceManager.GetObject("Hortaliças", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +136,16 @@ namespace Produtos_Agrícolas.Properties {
         internal static System.Drawing.Bitmap Sair {
             get {
                 object obj = ResourceManager.GetObject("Sair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vegetais {
+            get {
+                object obj = ResourceManager.GetObject("Vegetais", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
