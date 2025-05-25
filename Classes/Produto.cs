@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Produtos_Agrícolas.Classes
+﻿namespace Produtos_Agrícolas.Classes
 {
     internal class Produto
     {

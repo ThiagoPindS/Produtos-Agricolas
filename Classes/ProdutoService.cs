@@ -1,4 +1,6 @@
-﻿namespace Produtos_Agrícolas.Classes
+﻿using System.Globalization;
+
+namespace Produtos_Agrícolas.Classes
 {
     internal class ProdutoService
     {
@@ -26,7 +28,7 @@
 
         public static void FiltrarProduto(string filtro)
         {
-            using (var Leitor = bancoDeDados.ExecuteQuery($"SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos WHERE Categoria = {filtro}"))
+            using (var Leitor = bancoDeDados.ExecuteQuery($"SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos WHERE Categoria = '{filtro}'"))
             {
                 while (Leitor.Read())
                 {
@@ -45,7 +47,7 @@
         {
             if (produto.Nome != "" && produto.Categoria != "" && produto.Quantidade >= 0 && produto.Preco >= 0)
             {
-                bancoDeDados.ExecuteNonQuery($"INSERT INTO Produtos (Nome, Categoria, Quantidade, Preco) VALUES ('{produto.Nome}', '{produto.Categoria}', {produto.Quantidade}, '{produto.Preco}')");
+                bancoDeDados.ExecuteNonQuery($"INSERT INTO Produtos (Nome, Categoria, Quantidade, Preco) VALUES ('{produto.Nome}', '{produto.Categoria}', {produto.Quantidade}, '{produto.Preco.ToString(CultureInfo.InvariantCulture)}')");
 
                 MessageBox.Show("Produto cadastro com sucesso.");
             }
