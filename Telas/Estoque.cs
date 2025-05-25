@@ -4,8 +4,6 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Estoque : Form
     {
-        public static Estoque estoque = new Estoque();
-
         public Estoque()
         {
             InitializeComponent();
@@ -14,7 +12,11 @@ namespace Produtos_Agrícolas.Telas
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro.cadastro.Show();
+            using (Cadastro cadastro = new Cadastro())
+            {
+                cadastro.ShowDialog();
+            }
+            this.Show();
         }
 
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,7 +27,11 @@ namespace Produtos_Agrícolas.Telas
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venda.venda.Show();
+            using (Venda venda = new Venda())
+            {
+                venda.ShowDialog();
+            }
+            this.Show(); Venda.venda.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,43 +43,46 @@ namespace Produtos_Agrícolas.Telas
             }
         }
 
-        private void Estoque_VisibleChanged(object sender, EventArgs e)
-        {
-            ProdutoService.CarregarProdutos();
-
-            dgvEstoque.DataSource = ProdutoService.Produtos;
-
-            estoque.Location = new Point(
-                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
-             );
-        }
-
         private void Estoque_Load(object sender, EventArgs e)
         {
             ProdutoService.CarregarProdutos();
-
-            dgvEstoque.DataSource = ProdutoService.Produtos;
+            
+            AtualizarDataGridView();
         }
 
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdutoService.FiltrarProduto("Fruta");
+
+            AtualizarDataGridView();
         }
 
         private void grãosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdutoService.FiltrarProduto("Grão");
+
+            AtualizarDataGridView();
         }
 
         private void hortaliçasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdutoService.FiltrarProduto("Hortaliça");
+
+            AtualizarDataGridView();
         }
 
         private void vegetaisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdutoService.FiltrarProduto("Vegetal");
+
+            AtualizarDataGridView();
+        }
+
+        private void AtualizarDataGridView()
+        {
+            dgvEstoque.DataSource = "null";
+
+            dgvEstoque.DataSource = ProdutoService.Produtos;
         }
     }
 }

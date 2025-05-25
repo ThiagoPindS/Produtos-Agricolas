@@ -12,13 +12,21 @@
         private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro.cadastro.Show();
+            using (Cadastro cadastro = new Cadastro())
+            {
+                cadastro.ShowDialog();
+            }
+            this.Show();
         }
 
         private void estoqueToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Estoque.estoque.Show();
+            using (Estoque estoque = new Estoque())
+            {
+                estoque.ShowDialog();
+            }
+            this.Show();
         }
 
         private void vendaToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -33,14 +41,6 @@
             {
                 Application.Exit();
             }
-        }
-
-        private void Venda_VisibleChanged(object sender, EventArgs e)
-        {
-            venda.Location = new Point(
-                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
-             );
         }
     }
 }

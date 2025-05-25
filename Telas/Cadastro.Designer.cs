@@ -110,7 +110,7 @@
             btnSalvar.Location = new Point(262, 184);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
-            btnSalvar.TabIndex = 8;
+            btnSalvar.TabIndex = 4;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
@@ -160,11 +160,11 @@
             // cmbCategoria
             // 
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Items.AddRange(new object[] { "Grãos", "Hortaliças", "Frutas" });
+            cmbCategoria.Items.AddRange(new object[] { "Fruta", "Grão", "Hortaliça", "Vegetal" });
             cmbCategoria.Location = new Point(91, 97);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(245, 23);
-            cmbCategoria.TabIndex = 11;
+            cmbCategoria.TabIndex = 1;
             // 
             // Cadastro
             // 
@@ -184,7 +184,6 @@
             Name = "Cadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";
-            VisibleChanged += Cadastro_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

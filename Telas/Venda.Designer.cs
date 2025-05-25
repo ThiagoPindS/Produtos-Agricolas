@@ -88,7 +88,6 @@
             Name = "Venda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Venda";
-            VisibleChanged += Venda_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

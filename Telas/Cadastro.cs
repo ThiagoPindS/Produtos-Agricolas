@@ -26,13 +26,21 @@ namespace Produtos_Agrícolas.Telas
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Estoque.estoque.Show();
+            using (Estoque estoque = new Estoque())
+            {
+                estoque.ShowDialog();
+            }
+            this.Show();
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venda.venda.Show();
+            using (Venda venda = new Venda())
+            {
+                venda.ShowDialog();
+            }
+            this.Show(); Venda.venda.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,14 +50,6 @@ namespace Produtos_Agrícolas.Telas
             {
                 Application.Exit();
             }
-        }
-
-        private void Cadastro_VisibleChanged(object sender, EventArgs e)
-        {
-            cadastro.Location = new Point(
-                (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
-             );
         }
 
         private void LimparCampos()

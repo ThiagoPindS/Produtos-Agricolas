@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             pesquisarToolStripMenuItem = new ToolStripMenuItem();
             frutasToolStripMenuItem = new ToolStripMenuItem();
@@ -68,7 +68,7 @@
             // 
             frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
             frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
-            frutasToolStripMenuItem.Size = new Size(180, 24);
+            frutasToolStripMenuItem.Size = new Size(145, 24);
             frutasToolStripMenuItem.Text = "Frutas";
             frutasToolStripMenuItem.Click += frutasToolStripMenuItem_Click;
             // 
@@ -76,7 +76,7 @@
             // 
             grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
             grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
-            grãosToolStripMenuItem.Size = new Size(180, 24);
+            grãosToolStripMenuItem.Size = new Size(145, 24);
             grãosToolStripMenuItem.Text = "Grãos";
             grãosToolStripMenuItem.Click += grãosToolStripMenuItem_Click;
             // 
@@ -84,7 +84,7 @@
             // 
             hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
             hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
-            hortaliçasToolStripMenuItem.Size = new Size(180, 24);
+            hortaliçasToolStripMenuItem.Size = new Size(145, 24);
             hortaliçasToolStripMenuItem.Text = "Hortaliças";
             hortaliçasToolStripMenuItem.Click += hortaliçasToolStripMenuItem_Click;
             // 
@@ -92,7 +92,7 @@
             // 
             vegetaisToolStripMenuItem.Image = Properties.Resources.Vegetais;
             vegetaisToolStripMenuItem.Name = "vegetaisToolStripMenuItem";
-            vegetaisToolStripMenuItem.Size = new Size(180, 24);
+            vegetaisToolStripMenuItem.Size = new Size(145, 24);
             vegetaisToolStripMenuItem.Text = "Vegetais";
             vegetaisToolStripMenuItem.Click += vegetaisToolStripMenuItem_Click;
             // 
@@ -136,35 +136,35 @@
             dgvEstoque.AllowUserToResizeColumns = false;
             dgvEstoque.AllowUserToResizeRows = false;
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Control;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvEstoque.ColumnHeadersHeight = 28;
             dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = SystemColors.Window;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle2;
             dgvEstoque.Location = new Point(0, 31);
             dgvEstoque.Name = "dgvEstoque";
             dgvEstoque.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Control;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvEstoque.RowHeadersVisible = false;
             dgvEstoque.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvEstoque.Size = new Size(1264, 650);
@@ -182,7 +182,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
             Load += Estoque_Load;
-            VisibleChanged += Estoque_VisibleChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).EndInit();
