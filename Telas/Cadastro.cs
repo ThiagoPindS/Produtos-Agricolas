@@ -14,6 +14,8 @@ namespace Produtos_Agrícolas.Telas
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
+
+            LimparCampos();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,6 +50,14 @@ namespace Produtos_Agrícolas.Telas
                 (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
              );
+        }
+
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            cmbCategoria.Text = "";
+            txtQuantidade.Text = "0";
+            txtPreco.Text = "0";
         }
     }
 }

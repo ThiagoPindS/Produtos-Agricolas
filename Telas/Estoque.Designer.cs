@@ -33,15 +33,15 @@
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             pesquisarToolStripMenuItem = new ToolStripMenuItem();
+            frutasToolStripMenuItem = new ToolStripMenuItem();
+            grãosToolStripMenuItem = new ToolStripMenuItem();
+            hortaliçasToolStripMenuItem = new ToolStripMenuItem();
+            vegetaisToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvEstoque = new DataGridView();
-            grãosToolStripMenuItem = new ToolStripMenuItem();
-            hortaliçasToolStripMenuItem = new ToolStripMenuItem();
-            frutasToolStripMenuItem = new ToolStripMenuItem();
-            vegetaisToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
@@ -63,6 +63,38 @@
             pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             pesquisarToolStripMenuItem.Size = new Size(75, 24);
             pesquisarToolStripMenuItem.Text = "Filtrar";
+            // 
+            // frutasToolStripMenuItem
+            // 
+            frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
+            frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
+            frutasToolStripMenuItem.Size = new Size(180, 24);
+            frutasToolStripMenuItem.Text = "Frutas";
+            frutasToolStripMenuItem.Click += frutasToolStripMenuItem_Click;
+            // 
+            // grãosToolStripMenuItem
+            // 
+            grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
+            grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
+            grãosToolStripMenuItem.Size = new Size(180, 24);
+            grãosToolStripMenuItem.Text = "Grãos";
+            grãosToolStripMenuItem.Click += grãosToolStripMenuItem_Click;
+            // 
+            // hortaliçasToolStripMenuItem
+            // 
+            hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
+            hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
+            hortaliçasToolStripMenuItem.Size = new Size(180, 24);
+            hortaliçasToolStripMenuItem.Text = "Hortaliças";
+            hortaliçasToolStripMenuItem.Click += hortaliçasToolStripMenuItem_Click;
+            // 
+            // vegetaisToolStripMenuItem
+            // 
+            vegetaisToolStripMenuItem.Image = Properties.Resources.Vegetais;
+            vegetaisToolStripMenuItem.Name = "vegetaisToolStripMenuItem";
+            vegetaisToolStripMenuItem.Size = new Size(180, 24);
+            vegetaisToolStripMenuItem.Text = "Vegetais";
+            vegetaisToolStripMenuItem.Click += vegetaisToolStripMenuItem_Click;
             // 
             // cadastroToolStripMenuItem
             // 
@@ -137,34 +169,6 @@
             dgvEstoque.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvEstoque.Size = new Size(1264, 650);
             dgvEstoque.TabIndex = 1;
-            // 
-            // grãosToolStripMenuItem
-            // 
-            grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
-            grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
-            grãosToolStripMenuItem.Size = new Size(145, 24);
-            grãosToolStripMenuItem.Text = "Grãos";
-            // 
-            // hortaliçasToolStripMenuItem
-            // 
-            hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
-            hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
-            hortaliçasToolStripMenuItem.Size = new Size(145, 24);
-            hortaliçasToolStripMenuItem.Text = "Hortaliças";
-            // 
-            // frutasToolStripMenuItem
-            // 
-            frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
-            frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
-            frutasToolStripMenuItem.Size = new Size(145, 24);
-            frutasToolStripMenuItem.Text = "Frutas";
-            // 
-            // vegetaisToolStripMenuItem
-            // 
-            vegetaisToolStripMenuItem.Image = Properties.Resources.Vegetais;
-            vegetaisToolStripMenuItem.Name = "vegetaisToolStripMenuItem";
-            vegetaisToolStripMenuItem.Size = new Size(145, 24);
-            vegetaisToolStripMenuItem.Text = "Vegetais";
             // 
             // Estoque
             // 

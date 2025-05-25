@@ -39,6 +39,10 @@ namespace Produtos_Agrícolas.Telas
 
         private void Estoque_VisibleChanged(object sender, EventArgs e)
         {
+            ProdutoService.CarregarProdutos();
+
+            dgvEstoque.DataSource = ProdutoService.Produtos;
+
             estoque.Location = new Point(
                 (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2
@@ -50,6 +54,26 @@ namespace Produtos_Agrícolas.Telas
             ProdutoService.CarregarProdutos();
 
             dgvEstoque.DataSource = ProdutoService.Produtos;
+        }
+
+        private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdutoService.FiltrarProduto("Fruta");
+        }
+
+        private void grãosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdutoService.FiltrarProduto("Grão");
+        }
+
+        private void hortaliçasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdutoService.FiltrarProduto("Hortaliça");
+        }
+
+        private void vegetaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdutoService.FiltrarProduto("Vegetal");
         }
     }
 }

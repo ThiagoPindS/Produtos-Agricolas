@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Produtos-Agrícolas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebdc528dcf8c5363830644b99acd019f3f95ac53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e735137334cb89bdc2e83a77367311d05301311")]
 [assembly: System.Reflection.AssemblyProductAttribute("Produtos-Agrícolas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Produtos-Agrícolas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
