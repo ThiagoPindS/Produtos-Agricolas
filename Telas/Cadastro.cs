@@ -24,13 +24,13 @@ namespace Produtos_Agrícolas.Telas
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Estoque.estoque.ShowDialog();
+            Estoque.estoque.Show();
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venda.venda.ShowDialog();
+            Venda.venda.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

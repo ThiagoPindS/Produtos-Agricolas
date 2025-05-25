@@ -14,7 +14,7 @@ namespace Produtos_Agrícolas.Telas
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Cadastro.cadastro.ShowDialog();
+            Cadastro.cadastro.Show();
         }
 
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace Produtos_Agrícolas.Telas
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venda.venda.ShowDialog();
+            Venda.venda.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

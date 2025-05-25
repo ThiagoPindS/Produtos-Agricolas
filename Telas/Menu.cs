@@ -11,35 +11,17 @@ namespace Produtos_Agrícolas.Telas
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Cadastro.cadastro.ShowDialog();
-
-            if (Cadastro.cadastro.Visible == false && Estoque.estoque.Visible == false && Venda.venda.Visible == false)
-            {
-                this.Show();
-            }
+            Cadastro.cadastro.Show();
         }
 
         private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Estoque.estoque.ShowDialog();
-            
-            if (Cadastro.cadastro.Visible == false && Estoque.estoque.Visible == false && Venda.venda.Visible == false)
-            {
-                this.Show();
-            }
+            Estoque.estoque.Show();
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Venda.venda.ShowDialog();
-
-            if (Cadastro.cadastro.Visible == false && Estoque.estoque.Visible == false && Venda.venda.Visible == false)
-            {
-                this.Show();
-            }
+            Venda.venda.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
