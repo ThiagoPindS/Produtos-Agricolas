@@ -59,13 +59,23 @@ namespace Produtos_Agrícolas.Classes
             {
                 MessageBox.Show("Preencha os dados corretamente");
             }
-
         }
 
         public static void RemoverProduto()
         { }
 
-        public static void EditarProduto()
-        { }
+        public static void EditarProduto(Produto produto, int id)
+        {
+            if (produto.Nome != "" && produto.Categoria != "" && produto.Quantidade >= 0 && produto.Preco >= 0)
+            {
+                bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Nome = '{produto.Nome}', Categoria = '{produto.Categoria}', Quantidade = {produto.Quantidade}, Preco = {produto.Preco.ToString(CultureInfo.InvariantCulture)} WHERE Id = {id}");
+
+                MessageBox.Show("Produto cadastro com sucesso.");
+            }
+            else
+            {
+                MessageBox.Show("Preencha os dados corretamente");
+            }
+        }
     }
 }

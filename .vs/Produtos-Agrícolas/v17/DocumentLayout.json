@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\classes\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:classes\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\classes\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:classes\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Menu.cs",
               "RelativeDocumentMoniker": "Telas\\Menu.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Menu.cs",
               "RelativeToolTip": "Telas\\Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T16:16:38.834Z",
               "IsPinned": true,
@@ -48,16 +48,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Cadastro.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Cadastro.cs",
               "RelativeDocumentMoniker": "Telas\\Cadastro.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Cadastro.cs",
               "RelativeToolTip": "Telas\\Cadastro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACVAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T16:20:04.955Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -67,7 +68,7 @@
               "RelativeDocumentMoniker": "Telas\\Estoque.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Estoque.cs",
               "RelativeToolTip": "Telas\\Estoque.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAcwBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwEoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T16:20:36.624Z",
               "IsPinned": true,
@@ -84,19 +85,20 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T21:36:15.021Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ProdutoService.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Classes\\ProdutoService.cs",
               "RelativeDocumentMoniker": "Classes\\ProdutoService.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Classes\\ProdutoService.cs",
               "RelativeToolTip": "Classes\\ProdutoService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowEYAAADwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:10:04.785Z",
+              "WhenOpened": "2025-05-26T18:16:59.902Z",
               "EditorCaption": ""
             }
           ]

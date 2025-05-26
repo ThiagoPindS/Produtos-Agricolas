@@ -49,6 +49,56 @@ namespace Produtos_Agrícolas.Telas
             AtualizarDataGridView();
         }
 
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvEstoque.CurrentRow != null)
+            {
+                this.Hide();
+                using (Cadastro cadastro = new Cadastro())
+                {
+                    Cadastro.IsEdicao = true;
+
+                    Menu.CurrentId = int.Parse(dgvEstoque.CurrentRow.Cells[0].Value.ToString());
+
+                    cadastro.txtNome.Text = dgvEstoque.CurrentRow.Cells[1].Value.ToString();
+                    cadastro.cmbCategoria.Text = dgvEstoque.CurrentRow.Cells[2].Value.ToString();
+                    cadastro.txtQuantidade.Text = dgvEstoque.CurrentRow.Cells[3].Value.ToString();
+                    cadastro.txtPreco.Text = dgvEstoque.CurrentRow.Cells[4].Value.ToString();
+
+                    cadastro.ShowDialog();
+
+                    Cadastro.IsEdicao = false;
+                }
+
+                ProdutoService.CarregarProdutos();
+
+                AtualizarDataGridView();
+
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void venderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvEstoque.CurrentRow != null)
+            {
+                this.Hide();
+                using (Venda venda = new Venda())
+                {
+                    venda.ShowDialog();
+                }
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -2,9 +2,15 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
     {
+        static public Menu? instance;
+
+        static public int CurrentId = 0;
+
         public Menu()
         {
             InitializeComponent();
+
+            instance = this;
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)

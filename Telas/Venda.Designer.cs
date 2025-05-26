@@ -49,8 +49,8 @@
             // 
             voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
             voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
-            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
-            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            voltarAoMenuToolStripMenuItem.Size = new Size(76, 24);
+            voltarAoMenuToolStripMenuItem.Text = "Voltar";
             voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem

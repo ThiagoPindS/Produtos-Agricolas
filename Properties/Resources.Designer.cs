@@ -73,6 +73,16 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Editar {
+            get {
+                object obj = ResourceManager.GetObject("Editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Estoque {
             get {
                 object obj = ResourceManager.GetObject("Estoque", resourceCulture);
@@ -156,6 +166,16 @@ namespace Produtos_Agrícolas.Properties {
         internal static System.Drawing.Bitmap Venda {
             get {
                 object obj = ResourceManager.GetObject("Venda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Venda1 {
+            get {
+                object obj = ResourceManager.GetObject("Venda1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

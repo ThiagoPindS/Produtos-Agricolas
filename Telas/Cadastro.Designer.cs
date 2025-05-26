@@ -127,8 +127,8 @@
             // 
             voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
             voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
-            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
-            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            voltarAoMenuToolStripMenuItem.Size = new Size(76, 24);
+            voltarAoMenuToolStripMenuItem.Text = "Voltar";
             voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
@@ -174,9 +174,9 @@
 
         #endregion
 
-        private TextBox txtNome;
-        private TextBox txtQuantidade;
-        private TextBox txtPreco;
+        public TextBox txtNome;
+        public TextBox txtQuantidade;
+        public TextBox txtPreco;
         private Label lblNome;
         private Label lblCategoria;
         private Label lblQuantidade;
@@ -184,7 +184,7 @@
         private Button btnSalvar;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private ComboBox cmbCategoria;
+        public ComboBox cmbCategoria;
         private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
     }
 }

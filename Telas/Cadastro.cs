@@ -4,6 +4,8 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Cadastro : Form
     {
+        static public bool IsEdicao = false;
+
         public Cadastro()
         {
             InitializeComponent();
@@ -11,9 +13,18 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
+            if (IsEdicao == false)
+            {
+                ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
 
-            LimparCampos();
+                LimparCampos();
+            }
+            else
+            {
+                ProdutoService.EditarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)), Menu.CurrentId);
+
+                this.Close();
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
