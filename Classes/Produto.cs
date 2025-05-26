@@ -99,7 +99,7 @@
 
         public Produto(int id, string nome, string categoria, int quantidade, double preco)
         {
-            Id = Id;
+            Id = id;
             Nome = nome;
             Categoria = categoria;
             Quantidade = quantidade;

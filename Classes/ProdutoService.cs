@@ -15,7 +15,7 @@ namespace Produtos_Agrícolas.Classes
             {
                 while (Leitor.Read())
                 {
-                    int id = Leitor.GetInt32(0);
+                    int id = Leitor.GetInt16(0);
                     string nome = Leitor.GetString(1);
                     string categoria = Leitor.GetString(2);
                     int quantidade = Leitor.GetInt32(3);
