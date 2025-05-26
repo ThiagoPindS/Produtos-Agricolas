@@ -21,6 +21,13 @@ namespace Produtos_Agrícolas.Telas
             this.Close();
         }
 
+        private void geralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdutoService.CarregarProdutos();
+
+            AtualizarDataGridView();
+        }
+
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdutoService.FiltrarProduto("Fruta");

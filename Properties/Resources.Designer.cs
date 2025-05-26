@@ -113,6 +113,16 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Geral {
+            get {
+                object obj = ResourceManager.GetObject("Geral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Grãos {
             get {
                 object obj = ResourceManager.GetObject("Grãos", resourceCulture);

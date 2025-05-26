@@ -42,6 +42,7 @@
             venderToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvEstoque = new DataGridView();
+            geralToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
@@ -66,7 +67,7 @@
             // 
             // pesquisarToolStripMenuItem
             // 
-            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frutasToolStripMenuItem, grãosToolStripMenuItem, hortaliçasToolStripMenuItem, legumesToolStripMenuItem });
+            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { geralToolStripMenuItem, frutasToolStripMenuItem, grãosToolStripMenuItem, hortaliçasToolStripMenuItem, legumesToolStripMenuItem });
             pesquisarToolStripMenuItem.Image = Properties.Resources.Filtrar;
             pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             pesquisarToolStripMenuItem.Size = new Size(75, 24);
@@ -76,7 +77,7 @@
             // 
             frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
             frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
-            frutasToolStripMenuItem.Size = new Size(145, 24);
+            frutasToolStripMenuItem.Size = new Size(180, 24);
             frutasToolStripMenuItem.Text = "Frutas";
             frutasToolStripMenuItem.Click += frutasToolStripMenuItem_Click;
             // 
@@ -84,7 +85,7 @@
             // 
             grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
             grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
-            grãosToolStripMenuItem.Size = new Size(145, 24);
+            grãosToolStripMenuItem.Size = new Size(180, 24);
             grãosToolStripMenuItem.Text = "Grãos";
             grãosToolStripMenuItem.Click += grãosToolStripMenuItem_Click;
             // 
@@ -92,7 +93,7 @@
             // 
             hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
             hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
-            hortaliçasToolStripMenuItem.Size = new Size(145, 24);
+            hortaliçasToolStripMenuItem.Size = new Size(180, 24);
             hortaliçasToolStripMenuItem.Text = "Hortaliças";
             hortaliçasToolStripMenuItem.Click += hortaliçasToolStripMenuItem_Click;
             // 
@@ -100,7 +101,7 @@
             // 
             legumesToolStripMenuItem.Image = Properties.Resources.Legumes;
             legumesToolStripMenuItem.Name = "legumesToolStripMenuItem";
-            legumesToolStripMenuItem.Size = new Size(145, 24);
+            legumesToolStripMenuItem.Size = new Size(180, 24);
             legumesToolStripMenuItem.Text = "Legumes";
             legumesToolStripMenuItem.Click += legumesToolStripMenuItem_Click;
             // 
@@ -171,6 +172,14 @@
             dgvEstoque.Size = new Size(1264, 650);
             dgvEstoque.TabIndex = 1;
             // 
+            // geralToolStripMenuItem
+            // 
+            geralToolStripMenuItem.Image = Properties.Resources.Geral;
+            geralToolStripMenuItem.Name = "geralToolStripMenuItem";
+            geralToolStripMenuItem.Size = new Size(180, 24);
+            geralToolStripMenuItem.Text = "Geral";
+            geralToolStripMenuItem.Click += geralToolStripMenuItem_Click;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,5 +212,6 @@
         private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
         private ToolStripMenuItem editarToolStripMenuItem;
         private ToolStripMenuItem venderToolStripMenuItem;
+        private ToolStripMenuItem geralToolStripMenuItem;
     }
 }

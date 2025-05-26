@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agr\u00EDcolas\\classes\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Menu.cs",
               "RelativeDocumentMoniker": "Telas\\Menu.cs",
@@ -43,12 +47,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T16:16:38.834Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Cadastro.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Cadastro.cs",
               "RelativeDocumentMoniker": "Telas\\Cadastro.cs",
@@ -62,13 +65,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Estoque.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Estoque.cs",
               "RelativeDocumentMoniker": "Telas\\Estoque.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Estoque.cs",
               "RelativeToolTip": "Telas\\Estoque.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwEoAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T16:20:36.624Z",
               "IsPinned": true,
@@ -76,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Venda.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Venda.cs",
               "RelativeDocumentMoniker": "Telas\\Venda.cs",
@@ -85,12 +88,23 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T21:36:15.021Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Estoque.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Estoque.cs",
+              "RelativeDocumentMoniker": "Telas\\Estoque.cs",
+              "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Telas\\Estoque.cs [Projeto]",
+              "RelativeToolTip": "Telas\\Estoque.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T22:46:12.454Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProdutoService.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agr\u00EDcolas\\Classes\\ProdutoService.cs",
               "RelativeDocumentMoniker": "Classes\\ProdutoService.cs",
@@ -98,8 +112,7 @@
               "RelativeToolTip": "Classes\\ProdutoService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAowEYAAADwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T18:16:59.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T18:16:59.902Z"
             }
           ]
         }
