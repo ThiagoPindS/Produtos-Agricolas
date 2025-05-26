@@ -13,6 +13,8 @@ namespace Produtos_Agrícolas.Classes
         {
             using (var Leitor = bancoDeDados.ExecuteQuery("SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos"))
             {
+                Produtos.Clear();
+
                 while (Leitor.Read())
                 {
                     int id = Leitor.GetInt16(0);
@@ -30,6 +32,8 @@ namespace Produtos_Agrícolas.Classes
         {
             using (var Leitor = bancoDeDados.ExecuteQuery($"SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos WHERE Categoria = '{filtro}'"))
             {
+                Produtos.Clear();
+
                 while (Leitor.Read())
                 {
                     int id = Leitor.GetInt32(0);

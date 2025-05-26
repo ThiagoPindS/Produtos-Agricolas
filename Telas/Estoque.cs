@@ -9,20 +9,16 @@ namespace Produtos_Agrícolas.Telas
             InitializeComponent();
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (resultado == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         private void Estoque_Load(object sender, EventArgs e)
         {
             ProdutoService.CarregarProdutos();
 
             AtualizarDataGridView();
+        }
+
+        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,16 +49,20 @@ namespace Produtos_Agrícolas.Telas
             AtualizarDataGridView();
         }
 
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Tem certeza que deseja encerrar o programa?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
         private void AtualizarDataGridView()
         {
             dgvEstoque.DataSource = "null";
 
             dgvEstoque.DataSource = ProdutoService.Produtos;
-        }
-
-        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
