@@ -123,6 +123,16 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Legumes {
+            get {
+                object obj = ResourceManager.GetObject("Legumes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pesquisar {
             get {
                 object obj = ResourceManager.GetObject("Pesquisar", resourceCulture);
@@ -136,16 +146,6 @@ namespace Produtos_Agrícolas.Properties {
         internal static System.Drawing.Bitmap Sair {
             get {
                 object obj = ResourceManager.GetObject("Sair", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Vegetais {
-            get {
-                object obj = ResourceManager.GetObject("Vegetais", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -38,9 +38,9 @@
             lblPreco = new Label();
             btnSalvar = new Button();
             menuStrip1 = new MenuStrip();
+            voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             cmbCategoria = new ComboBox();
-            voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,6 +123,14 @@
             menuStrip1.TabIndex = 10;
             menuStrip1.Text = "menuStrip1";
             // 
+            // voltarAoMenuToolStripMenuItem
+            // 
+            voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
+            voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
+            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
+            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
+            // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Image = (Image)resources.GetObject("sairToolStripMenuItem.Image");
@@ -134,19 +142,11 @@
             // cmbCategoria
             // 
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Items.AddRange(new object[] { "Fruta", "Grão", "Hortaliça", "Vegetal" });
+            cmbCategoria.Items.AddRange(new object[] { "Fruta", "Grão", "Hortaliça", "Legume" });
             cmbCategoria.Location = new Point(91, 97);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(245, 23);
             cmbCategoria.TabIndex = 1;
-            // 
-            // voltarAoMenuToolStripMenuItem
-            // 
-            voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
-            voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
-            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
-            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
-            voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
             // 
             // Cadastro
             // 

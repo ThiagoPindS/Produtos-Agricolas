@@ -46,9 +46,9 @@ namespace Produtos_Agrícolas.Telas
             AtualizarDataGridView();
         }
 
-        private void vegetaisToolStripMenuItem_Click(object sender, EventArgs e)
+        private void legumesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.FiltrarProduto("Vegetal");
+            ProdutoService.FiltrarProduto("Legume");
 
             AtualizarDataGridView();
         }

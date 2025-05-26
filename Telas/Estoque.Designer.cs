@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
+            voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             pesquisarToolStripMenuItem = new ToolStripMenuItem();
             frutasToolStripMenuItem = new ToolStripMenuItem();
             grãosToolStripMenuItem = new ToolStripMenuItem();
             hortaliçasToolStripMenuItem = new ToolStripMenuItem();
-            vegetaisToolStripMenuItem = new ToolStripMenuItem();
+            legumesToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvEstoque = new DataGridView();
-            voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
@@ -54,9 +54,17 @@
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
+            // voltarAoMenuToolStripMenuItem
+            // 
+            voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
+            voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
+            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
+            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
+            // 
             // pesquisarToolStripMenuItem
             // 
-            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frutasToolStripMenuItem, grãosToolStripMenuItem, hortaliçasToolStripMenuItem, vegetaisToolStripMenuItem });
+            pesquisarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { frutasToolStripMenuItem, grãosToolStripMenuItem, hortaliçasToolStripMenuItem, legumesToolStripMenuItem });
             pesquisarToolStripMenuItem.Image = Properties.Resources.Filtrar;
             pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             pesquisarToolStripMenuItem.Size = new Size(75, 24);
@@ -66,7 +74,7 @@
             // 
             frutasToolStripMenuItem.Image = Properties.Resources.Frutas;
             frutasToolStripMenuItem.Name = "frutasToolStripMenuItem";
-            frutasToolStripMenuItem.Size = new Size(145, 24);
+            frutasToolStripMenuItem.Size = new Size(180, 24);
             frutasToolStripMenuItem.Text = "Frutas";
             frutasToolStripMenuItem.Click += frutasToolStripMenuItem_Click;
             // 
@@ -74,7 +82,7 @@
             // 
             grãosToolStripMenuItem.Image = Properties.Resources.Grãos;
             grãosToolStripMenuItem.Name = "grãosToolStripMenuItem";
-            grãosToolStripMenuItem.Size = new Size(145, 24);
+            grãosToolStripMenuItem.Size = new Size(180, 24);
             grãosToolStripMenuItem.Text = "Grãos";
             grãosToolStripMenuItem.Click += grãosToolStripMenuItem_Click;
             // 
@@ -82,17 +90,17 @@
             // 
             hortaliçasToolStripMenuItem.Image = Properties.Resources.Hortaliças;
             hortaliçasToolStripMenuItem.Name = "hortaliçasToolStripMenuItem";
-            hortaliçasToolStripMenuItem.Size = new Size(145, 24);
+            hortaliçasToolStripMenuItem.Size = new Size(180, 24);
             hortaliçasToolStripMenuItem.Text = "Hortaliças";
             hortaliçasToolStripMenuItem.Click += hortaliçasToolStripMenuItem_Click;
             // 
-            // vegetaisToolStripMenuItem
+            // legumesToolStripMenuItem
             // 
-            vegetaisToolStripMenuItem.Image = Properties.Resources.Vegetais;
-            vegetaisToolStripMenuItem.Name = "vegetaisToolStripMenuItem";
-            vegetaisToolStripMenuItem.Size = new Size(145, 24);
-            vegetaisToolStripMenuItem.Text = "Vegetais";
-            vegetaisToolStripMenuItem.Click += vegetaisToolStripMenuItem_Click;
+            legumesToolStripMenuItem.Image = Properties.Resources.Legumes;
+            legumesToolStripMenuItem.Name = "legumesToolStripMenuItem";
+            legumesToolStripMenuItem.Size = new Size(180, 24);
+            legumesToolStripMenuItem.Text = "Legumes";
+            legumesToolStripMenuItem.Click += legumesToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -110,47 +118,39 @@
             dgvEstoque.AllowUserToResizeColumns = false;
             dgvEstoque.AllowUserToResizeRows = false;
             dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvEstoque.ColumnHeadersHeight = 28;
             dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvEstoque.DefaultCellStyle = dataGridViewCellStyle5;
             dgvEstoque.Location = new Point(0, 31);
             dgvEstoque.Name = "dgvEstoque";
             dgvEstoque.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvEstoque.RowHeadersVisible = false;
             dgvEstoque.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvEstoque.Size = new Size(1264, 650);
             dgvEstoque.TabIndex = 1;
-            // 
-            // voltarAoMenuToolStripMenuItem
-            // 
-            voltarAoMenuToolStripMenuItem.Image = Properties.Resources.Voltar;
-            voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
-            voltarAoMenuToolStripMenuItem.Size = new Size(138, 24);
-            voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
-            voltarAoMenuToolStripMenuItem.Click += voltarAoMenuToolStripMenuItem_Click;
             // 
             // Estoque
             // 
@@ -180,7 +180,7 @@
         private ToolStripMenuItem grãosToolStripMenuItem;
         private ToolStripMenuItem hortaliçasToolStripMenuItem;
         private ToolStripMenuItem frutasToolStripMenuItem;
-        private ToolStripMenuItem vegetaisToolStripMenuItem;
+        private ToolStripMenuItem legumesToolStripMenuItem;
         private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
     }
 }
