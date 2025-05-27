@@ -13,17 +13,28 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (IsEdicao == false)
+            if (txtNome.Text != "" && cmbCategoria.Text != "" && txtQuantidade.Text != "" && txtPreco.Text != "")
             {
-                ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
+                if (IsEdicao == false)
+                {
+                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
 
-                LimparCampos();
+                    MessageBox.Show("Produto cadastro com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LimparCampos();
+                }
+                else
+                {
+                    ProdutoService.EditarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)), Estoque.IdAtual);
+
+                    MessageBox.Show("Produto atualizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
             }
             else
             {
-                ProdutoService.EditarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)), Menu.CurrentId);
-
-                this.Close();
+                MessageBox.Show("Preencha todos os dados do produto", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -4,6 +4,12 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Estoque : Form
     {
+        public static int IdAtual = 0;
+
+        private string CategoriaAtual = "";
+
+        public static List<Produto> Produtos = new List<Produto>();
+
         public Estoque()
         {
             InitializeComponent();
@@ -11,9 +17,9 @@ namespace Produtos_Agrícolas.Telas
 
         private void Estoque_Load(object sender, EventArgs e)
         {
-            ProdutoService.CarregarProdutos();
+            AtualizarDataGridView("");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "";
         }
 
         private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -23,37 +29,37 @@ namespace Produtos_Agrícolas.Telas
 
         private void geralToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.CarregarProdutos();
+            AtualizarDataGridView("");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "";
         }
 
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.FiltrarProduto("Fruta");
+            AtualizarDataGridView("Fruta");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "Fruta";
         }
 
         private void grãosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.FiltrarProduto("Grão");
+            AtualizarDataGridView("Grão");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "Grão";
         }
 
         private void hortaliçasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.FiltrarProduto("Hortaliça");
+            AtualizarDataGridView("Hortaliça");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "Hortaliça";
         }
 
         private void legumesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdutoService.FiltrarProduto("Legume");
+            AtualizarDataGridView("Legume");
 
-            AtualizarDataGridView();
+            CategoriaAtual = "Legume";
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,11 +67,12 @@ namespace Produtos_Agrícolas.Telas
             if (dgvEstoque.CurrentRow != null)
             {
                 this.Hide();
+
                 using (Cadastro cadastro = new Cadastro())
                 {
                     Cadastro.IsEdicao = true;
 
-                    Menu.CurrentId = int.Parse(dgvEstoque.CurrentRow.Cells[0].Value.ToString());
+                    IdAtual = int.Parse(dgvEstoque.CurrentRow.Cells[0].Value.ToString());
 
                     cadastro.txtNome.Text = dgvEstoque.CurrentRow.Cells[1].Value.ToString();
                     cadastro.cmbCategoria.Text = dgvEstoque.CurrentRow.Cells[2].Value.ToString();
@@ -74,12 +81,12 @@ namespace Produtos_Agrícolas.Telas
 
                     cadastro.ShowDialog();
 
+                    IdAtual = 0;
+
                     Cadastro.IsEdicao = false;
                 }
 
-                ProdutoService.CarregarProdutos();
-
-                AtualizarDataGridView();
+                AtualizarDataGridView(CategoriaAtual);
 
                 this.Show();
             }
@@ -115,11 +122,13 @@ namespace Produtos_Agrícolas.Telas
             }
         }
 
-        private void AtualizarDataGridView()
+        private void AtualizarDataGridView(string filtro)
         {
+            Produtos = ProdutoService.CarregarProdutos(filtro);
+
             dgvEstoque.DataSource = "null";
 
-            dgvEstoque.DataSource = ProdutoService.Produtos;
+            dgvEstoque.DataSource = Produtos;
         }
     }
 }

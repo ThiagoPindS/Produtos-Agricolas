@@ -4,78 +4,39 @@ namespace Produtos_Agrícolas.Classes
 {
     internal class ProdutoService
     {
-        public static List<Produto> Produtos = new List<Produto>();
-
         public static BancoDeDados bancoDeDados = new BancoDeDados("C:\\Users\\Thiago\\source\\repos\\Produtos-Agrícolas\\Produtos-Agricolas-BD.db");
 
-
-        public static void CarregarProdutos()
+        public static List<Produto> CarregarProdutos(string filtro)
         {
-            using (var Leitor = bancoDeDados.ExecuteQuery("SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos"))
+            if (filtro != "")
             {
-                Produtos.Clear();
-
-                while (Leitor.Read())
-                {
-                    int id = Leitor.GetInt16(0);
-                    string nome = Leitor.GetString(1);
-                    string categoria = Leitor.GetString(2);
-                    int quantidade = Leitor.GetInt32(3);
-                    double preco = Leitor.GetDouble(4);
-
-                    Produtos.Add(new Produto(id, nome, categoria, quantidade, preco));
-                }
+                filtro = $" WHERE Categoria = '{filtro}'";
             }
-        }
 
-        public static void FiltrarProduto(string filtro)
-        {
-            using (var Leitor = bancoDeDados.ExecuteQuery($"SELECT Id, Nome, Categoria, Quantidade, Preco FROM Produtos WHERE Categoria = '{filtro}'"))
+            using (var Leitor = bancoDeDados.ExecuteQuery("SELECT * FROM Produtos" + filtro))
             {
-                Produtos.Clear();
+                List<Produto> ProdutosBD = new List<Produto>();
 
                 while (Leitor.Read())
                 {
-                    int id = Leitor.GetInt32(0);
-                    string nome = Leitor.GetString(1);
-                    string categoria = Leitor.GetString(2);
-                    int quantidade = Leitor.GetInt32(3);
-                    double preco = Leitor.GetDouble(4);
-
-                    Produtos.Add(new Produto(id, nome, categoria, quantidade, preco));
+                    ProdutosBD.Add(new Produto(Leitor.GetInt32(0), Leitor.GetString(1), Leitor.GetString(2), Leitor.GetInt32(3), Leitor.GetDouble(4)));
                 }
+
+                return ProdutosBD;
             }
         }
 
         public static void CadastrarProduto(Produto produto)
         {
-            if (produto.Nome != "" && produto.Categoria != "" && produto.Quantidade >= 0 && produto.Preco >= 0)
-            {
-                bancoDeDados.ExecuteNonQuery($"INSERT INTO Produtos (Nome, Categoria, Quantidade, Preco) VALUES ('{produto.Nome}', '{produto.Categoria}', {produto.Quantidade}, '{produto.Preco.ToString(CultureInfo.InvariantCulture)}')");
+            bancoDeDados.ExecuteNonQuery($"INSERT INTO Produtos (Nome, Categoria, Quantidade, Preco) VALUES ('{produto.Nome}', '{produto.Categoria}', {produto.Quantidade}, '{produto.Preco.ToString(CultureInfo.InvariantCulture)}')");
+        }
 
-                MessageBox.Show("Produto cadastro com sucesso.");
-            }
-            else
-            {
-                MessageBox.Show("Preencha os dados corretamente");
-            }
+        public static void EditarProduto(Produto produto, int id)
+        {
+            bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Nome = '{produto.Nome}', Categoria = '{produto.Categoria}', Quantidade = {produto.Quantidade}, Preco = {produto.Preco.ToString(CultureInfo.InvariantCulture)} WHERE Id = {id}");
         }
 
         public static void RemoverProduto()
         { }
-
-        public static void EditarProduto(Produto produto, int id)
-        {
-            if (produto.Nome != "" && produto.Categoria != "" && produto.Quantidade >= 0 && produto.Preco >= 0)
-            {
-                bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Nome = '{produto.Nome}', Categoria = '{produto.Categoria}', Quantidade = {produto.Quantidade}, Preco = {produto.Preco.ToString(CultureInfo.InvariantCulture)} WHERE Id = {id}");
-
-                MessageBox.Show("Produto cadastro com sucesso.");
-            }
-            else
-            {
-                MessageBox.Show("Preencha os dados corretamente");
-            }
-        }
     }
 }

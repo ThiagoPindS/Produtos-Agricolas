@@ -1,6 +1,6 @@
 ﻿namespace Produtos_Agrícolas.Classes
 {
-    internal class Produto
+    public class Produto
     {
         private int _id;
         private string _nome;
