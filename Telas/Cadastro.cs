@@ -28,6 +28,8 @@ namespace Produtos_Agrícolas.Telas
                     ProdutoService.EditarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)), Estoque.IdAtual);
 
                     MessageBox.Show("Produto atualizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    IsEdicao = false;
 
                     this.Close();
                 }

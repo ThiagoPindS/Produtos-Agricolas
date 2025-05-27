@@ -36,7 +36,9 @@ namespace Produtos_Agrícolas.Classes
             bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Nome = '{produto.Nome}', Categoria = '{produto.Categoria}', Quantidade = {produto.Quantidade}, Preco = {produto.Preco.ToString(CultureInfo.InvariantCulture)} WHERE Id = {id}");
         }
 
-        public static void RemoverProduto()
-        { }
+        public static void VenderProduto(int id, int quantidade)
+        {
+            bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Quantidade = {quantidade} WHERE Id = {id}");
+        }
     }
 }

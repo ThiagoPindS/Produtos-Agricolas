@@ -80,11 +80,9 @@ namespace Produtos_Agrícolas.Telas
                     cadastro.txtPreco.Text = dgvEstoque.CurrentRow.Cells[4].Value.ToString();
 
                     cadastro.ShowDialog();
-
-                    IdAtual = 0;
-
-                    Cadastro.IsEdicao = false;
                 }
+
+                IdAtual = 0;
 
                 AtualizarDataGridView(CategoriaAtual);
 
