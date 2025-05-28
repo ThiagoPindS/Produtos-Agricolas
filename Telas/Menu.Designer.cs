@@ -32,8 +32,8 @@
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
-            vendaToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            vendaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,14 +63,6 @@
             estoqueToolStripMenuItem.Text = "Estoque";
             estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
             // 
-            // vendaToolStripMenuItem
-            // 
-            vendaToolStripMenuItem.Image = Properties.Resources.Venda;
-            vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            vendaToolStripMenuItem.Size = new Size(78, 24);
-            vendaToolStripMenuItem.Text = "Venda";
-            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
-            // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Image = (Image)resources.GetObject("sairToolStripMenuItem.Image");
@@ -78,6 +70,14 @@
             sairToolStripMenuItem.Size = new Size(62, 24);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            // 
+            // vendaToolStripMenuItem
+            // 
+            vendaToolStripMenuItem.Image = Properties.Resources.Venda;
+            vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            vendaToolStripMenuItem.Size = new Size(78, 24);
+            vendaToolStripMenuItem.Text = "Venda";
+            vendaToolStripMenuItem.Click += vendaToolStripMenuItem_Click;
             // 
             // Menu
             // 
@@ -99,7 +99,7 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem estoqueToolStripMenuItem;
-        private ToolStripMenuItem vendaToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStripMenuItem vendaToolStripMenuItem;
     }
 }

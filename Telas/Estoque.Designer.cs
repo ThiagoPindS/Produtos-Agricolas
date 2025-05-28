@@ -191,7 +191,6 @@
             Name = "Estoque";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
-            Load += Estoque_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).EndInit();

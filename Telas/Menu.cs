@@ -4,13 +4,9 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
     {
-        public static List<Produto> Produtos = new List<Produto>();
-
         public Menu()
         {
             InitializeComponent();
-
-            Produtos = ProdutoService.CarregarProdutos("");
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,9 +32,12 @@ namespace Produtos_Agrícolas.Telas
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (Venda venda = new Venda())
+            using (Estoque estoque = new Estoque())
             {
-                venda.ShowDialog();
+                using (Venda venda = new Venda())
+                {
+                    venda.ShowDialog();
+                }
             }
             this.Show();
         }

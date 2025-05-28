@@ -4,7 +4,7 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Venda : Form
     {
-        public static int IdAtual = 0;
+        static public int IdAtual = Estoque.IdAtual - 1;
 
         public Venda()
         {
@@ -53,9 +53,11 @@ namespace Produtos_Agrícolas.Telas
                 {
                     ProdutoService.VenderProduto((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text));
 
-                    Menu.Produtos = ProdutoService.CarregarProdutos("");
+                    Estoque.Produtos = ProdutoService.CarregarProdutos("");
 
                     CarregarProduto(IdAtual);
+
+                    MessageBox.Show("Venda realizada com sucesso", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -66,17 +68,17 @@ namespace Produtos_Agrícolas.Telas
 
         private void CarregarProduto(int id)
         {
-            txtNome.Text = Menu.Produtos[id].Nome.ToString();
-            txtQuantidadeDisponivel.Text = Menu.Produtos[id].Quantidade.ToString();
+            txtNome.Text = Estoque.Produtos[id].Nome.ToString();
+            txtQuantidadeDisponivel.Text = Estoque.Produtos[id].Quantidade.ToString();
             txtQuantidadeVenda.Text = "0";
-            txtPreco.Text = Menu.Produtos[id].Preco.ToString("F2");
+            txtPreco.Text = Estoque.Produtos[id].Preco.ToString("F2");
         }
 
         private void txtQuantidadeVenda_TextChanged(object sender, EventArgs e)
         {
             if (txtQuantidadeVenda.Text != "")
             {
-                txtPrecoTotal.Text = (int.Parse(txtQuantidadeVenda.Text) * Menu.Produtos[IdAtual].Preco).ToString("F2");
+                txtPrecoTotal.Text = (int.Parse(txtQuantidadeVenda.Text) * Estoque.Produtos[IdAtual].Preco).ToString("F2");
             }
         }
     }

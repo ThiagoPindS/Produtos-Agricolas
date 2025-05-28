@@ -4,6 +4,8 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Estoque : Form
     {
+        public static List<Produto> Produtos = new List<Produto>();
+
         public static int IdAtual = 0;
 
         private string CategoriaAtual = "";
@@ -11,10 +13,7 @@ namespace Produtos_Agrícolas.Telas
         public Estoque()
         {
             InitializeComponent();
-        }
 
-        private void Estoque_Load(object sender, EventArgs e)
-        {
             AtualizarDataGridView("");
 
             CategoriaAtual = "";
@@ -92,13 +91,21 @@ namespace Produtos_Agrícolas.Telas
             }
         }
 
-        private void venderToolStripMenuItem_Click(object sender, EventArgs e)
+        public void venderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvEstoque.CurrentRow != null)
             {
                 this.Hide();
+
                 using (Venda venda = new Venda())
                 {
+                    IdAtual = int.Parse(dgvEstoque.CurrentRow.Cells[0].Value.ToString());
+
+                    venda.txtId.Text = dgvEstoque.CurrentRow.Cells[0].Value.ToString();
+                    venda.txtNome.Text = dgvEstoque.CurrentRow.Cells[1].Value.ToString();
+                    venda.txtQuantidadeDisponivel.Text = dgvEstoque.CurrentRow.Cells[3].Value.ToString();
+                    venda.txtPreco.Text = dgvEstoque.CurrentRow.Cells[4].Value.ToString();
+
                     venda.ShowDialog();
                 }
                 this.Show();
@@ -120,11 +127,11 @@ namespace Produtos_Agrícolas.Telas
 
         private void AtualizarDataGridView(string filtro)
         {
-            Menu.Produtos = ProdutoService.CarregarProdutos(filtro);
+            Produtos = ProdutoService.CarregarProdutos(filtro);
 
             dgvEstoque.DataSource = "null";
 
-            dgvEstoque.DataSource = Menu.Produtos;
+            dgvEstoque.DataSource = Produtos;
         }
     }
 }
