@@ -1,11 +1,16 @@
+using Produtos_Agrícolas.Classes;
+
 namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
     {
+        public static List<Produto> Produtos = new List<Produto>();
 
         public Menu()
         {
             InitializeComponent();
+
+            Produtos = ProdutoService.CarregarProdutos("");
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)

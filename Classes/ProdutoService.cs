@@ -38,7 +38,7 @@ namespace Produtos_Agrícolas.Classes
 
         public static void VenderProduto(int id, int quantidade)
         {
-            bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Quantidade = {quantidade} WHERE Id = {id}");
+            bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Quantidade = Quantidade - {quantidade} WHERE Id = {id}");
         }
     }
 }

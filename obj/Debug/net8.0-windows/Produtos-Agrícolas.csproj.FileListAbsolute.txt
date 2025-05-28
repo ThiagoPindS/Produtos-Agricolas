@@ -46,3 +46,4 @@ C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produt
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Estoque.resources
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Menu.resources
 C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Venda.resources
+C:\Users\Thiago\source\repos\Produtos-Agrícolas\obj\Debug\net8.0-windows\Produtos_Agrícolas.Telas.Registros.resources

@@ -8,8 +8,6 @@ namespace Produtos_Agrícolas.Telas
 
         private string CategoriaAtual = "";
 
-        public static List<Produto> Produtos = new List<Produto>();
-
         public Estoque()
         {
             InitializeComponent();
@@ -122,11 +120,11 @@ namespace Produtos_Agrícolas.Telas
 
         private void AtualizarDataGridView(string filtro)
         {
-            Produtos = ProdutoService.CarregarProdutos(filtro);
+            Menu.Produtos = ProdutoService.CarregarProdutos(filtro);
 
             dgvEstoque.DataSource = "null";
 
-            dgvEstoque.DataSource = Produtos;
+            dgvEstoque.DataSource = Menu.Produtos;
         }
     }
 }
