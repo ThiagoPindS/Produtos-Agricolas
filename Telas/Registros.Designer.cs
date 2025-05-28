@@ -32,7 +32,9 @@
             menuStrip1 = new MenuStrip();
             voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -61,17 +63,27 @@
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 31);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(1264, 650);
+            dataGridView1.TabIndex = 12;
+            // 
             // Registros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
+            Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             Name = "Registros";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registros";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -81,5 +93,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private DataGridView dataGridView1;
     }
 }
