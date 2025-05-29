@@ -54,7 +54,7 @@ namespace Produtos_Agrícolas.Telas
             txtNome.Text = "";
             cmbCategoria.Text = "";
             txtQuantidade.Text = "0";
-            txtPreco.Text = "0";
+            txtPreco.Text = "0,00";
         }
 
         private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)

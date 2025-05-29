@@ -4,7 +4,7 @@ namespace Produtos_Agrícolas.Classes
 {
     internal class ProdutoService
     {
-        public static BancoDeDados bancoDeDados = new BancoDeDados("C:\\Users\\Thiago\\source\\repos\\Produtos-Agrícolas\\Produtos-Agricolas-BD.db");
+        public static BancoDeDados bancoDeDados = new BancoDeDados("C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Produtos-Agricolas-BD.db");
 
         public static List<Produto> CarregarProdutos(string filtro)
         {
@@ -34,11 +34,6 @@ namespace Produtos_Agrícolas.Classes
         public static void EditarProduto(Produto produto, int id)
         {
             bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Nome = '{produto.Nome}', Categoria = '{produto.Categoria}', Quantidade = {produto.Quantidade}, Preco = {produto.Preco.ToString(CultureInfo.InvariantCulture)} WHERE Id = {id}");
-        }
-
-        public static void VenderProduto(int id, int quantidade)
-        {
-            bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Quantidade = Quantidade - {quantidade} WHERE Id = {id}");
         }
     }
 }

@@ -8,15 +8,11 @@ namespace Produtos_Agrícolas.Telas
 
         public static int IdAtual = 0;
 
-        private string CategoriaAtual = "";
-
         public Estoque()
         {
             InitializeComponent();
 
             AtualizarDataGridView("");
-
-            CategoriaAtual = "";
         }
 
         private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,36 +23,26 @@ namespace Produtos_Agrícolas.Telas
         private void geralToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView("");
-
-            CategoriaAtual = "";
         }
 
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView("Fruta");
-
-            CategoriaAtual = "Fruta";
         }
 
         private void grãosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView("Grão");
-
-            CategoriaAtual = "Grão";
         }
 
         private void hortaliçasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView("Hortaliça");
-
-            CategoriaAtual = "Hortaliça";
         }
 
         private void legumesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AtualizarDataGridView("Legume");
-
-            CategoriaAtual = "Legume";
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,7 +67,7 @@ namespace Produtos_Agrícolas.Telas
 
                 IdAtual = 0;
 
-                AtualizarDataGridView(CategoriaAtual);
+                AtualizarDataGridView("");
 
                 this.Show();
             }
@@ -97,7 +83,7 @@ namespace Produtos_Agrícolas.Telas
             {
                 this.Hide();
 
-                using (Venda venda = new Venda())
+                using (Vender venda = new Vender())
                 {
                     IdAtual = int.Parse(dgvEstoque.CurrentRow.Cells[0].Value.ToString());
 
@@ -108,6 +94,9 @@ namespace Produtos_Agrícolas.Telas
 
                     venda.ShowDialog();
                 }
+
+                AtualizarDataGridView("");
+
                 this.Show();
             }
             else

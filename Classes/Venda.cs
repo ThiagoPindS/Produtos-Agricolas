@@ -1,6 +1,6 @@
 ﻿namespace Produtos_Agrícolas.Classes
 {
-    internal class Venda
+    public class Venda
     {
         private int _id;
         private DateTime _data;
@@ -111,10 +111,9 @@
             }
         }
 
-        public Venda(int id, DateTime data, string nome, int quantidade, double precoUnitario, double precoTotal)
+        public Venda(string nome, int quantidade, double precoUnitario, double precoTotal)
         {
-            Id = id;
-            Data = data;
+            Data = DateTime.Now;
             Nome = nome;
             Quantidade = quantidade;
             PrecoUnitario = precoUnitario;

@@ -32,12 +32,9 @@ namespace Produtos_Agrícolas.Telas
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (Estoque estoque = new Estoque())
+            using (Vender venda = new Vender())
             {
-                using (Venda venda = new Venda())
-                {
-                    venda.ShowDialog();
-                }
+                venda.ShowDialog();
             }
             this.Show();
         }
