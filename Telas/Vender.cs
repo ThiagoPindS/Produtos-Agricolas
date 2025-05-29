@@ -42,7 +42,7 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            IdAtual = int.Parse(txtId.Text) - 1;
+            IdAtual = int.Parse(txtId.Text.Trim()) - 1;
 
             CarregarProduto(IdAtual);
         }

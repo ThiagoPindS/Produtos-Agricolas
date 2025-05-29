@@ -17,7 +17,7 @@ namespace Produtos_Agrícolas.Telas
             {
                 if (IsEdicao == false)
                 {
-                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)));
+                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text.ToUpper().Trim(), cmbCategoria.Text.ToUpper().Trim(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())));
 
                     MessageBox.Show("Produto cadastro com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

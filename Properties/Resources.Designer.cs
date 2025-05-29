@@ -153,9 +153,29 @@ namespace Produtos_Agrícolas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MenuInicial {
+            get {
+                object obj = ResourceManager.GetObject("MenuInicial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pesquisar {
             get {
                 object obj = ResourceManager.GetObject("Pesquisar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Registros {
+            get {
+                object obj = ResourceManager.GetObject("Registros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

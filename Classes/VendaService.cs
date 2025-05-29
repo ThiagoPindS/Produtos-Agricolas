@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Produtos_Agrícolas.Classes
 {

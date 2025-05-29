@@ -1,5 +1,3 @@
-using Produtos_Agrícolas.Classes;
-
 namespace Produtos_Agrícolas.Telas
 {
     public partial class Menu : Form
@@ -35,6 +33,16 @@ namespace Produtos_Agrícolas.Telas
             using (Vender venda = new Vender())
             {
                 venda.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (Registros registros = new Registros())
+            {
+                registros.ShowDialog();
             }
             this.Show();
         }
