@@ -3,8 +3,8 @@
     public class Venda
     {
         private int _id;
-        private DateTime _data;
         private string _nome;
+        private string _data;
         private int _quantidade;
         private double _precoUnitario;
         private double _precoTotal;
@@ -43,7 +43,7 @@
             }
         }
 
-        public DateTime Data
+        public string Data
         {
             get { return _data; }
 
@@ -111,13 +111,20 @@
             }
         }
 
-        public Venda(string nome, int quantidade, double precoUnitario, double precoTotal)
+        public Venda(int id, string nome, string data, int quantidade, double precoUnitario, double precoTotal)
         {
-            Data = DateTime.Now;
+            Id = id;
             Nome = nome;
+            Data = data;
             Quantidade = quantidade;
             PrecoUnitario = precoUnitario;
             PrecoTotal = precoTotal;
+        }
+
+        public Venda(string nome, double precoUnitario)
+        {
+            Nome = nome;
+            PrecoUnitario = precoUnitario;
         }
     }
 }

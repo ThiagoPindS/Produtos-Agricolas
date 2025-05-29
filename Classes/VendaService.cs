@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
+﻿using System.Globalization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Windows.Forms;
 
 namespace Produtos_Agrícolas.Classes
 {
@@ -14,10 +11,22 @@ namespace Produtos_Agrícolas.Classes
         {
             bancoDeDados.ExecuteNonQuery($"UPDATE Produtos SET Quantidade = Quantidade - {quantidade} WHERE Id = {id}");
 
-            bancoDeDados.ExecuteNonQuery($"INSERT INTO Vendas (ProdutoId, Data, Quantidade, PrecoUnitario, PrecoTotal) SELECT Id, {DateTime.Now}, {venda.Nome}, {venda.Quantidade}, {venda.PrecoUnitario.ToString(CultureInfo.InvariantCulture)}, {venda.PrecoTotal.ToString(CultureInfo.InvariantCulture)} FROM Produtos WHERE Id = 1;\r\n");
+            bancoDeDados.ExecuteNonQuery($"INSERT INTO Vendas (ProdutoId, Nome, Data, Quantidade, PrecoUnitario, PrecoTotal) SELECT Id, '{venda.Nome}', '{DateTime.Now}', {quantidade}, '{venda.PrecoUnitario.ToString(CultureInfo.InvariantCulture)}', '{(venda.PrecoUnitario * quantidade).ToString(CultureInfo.InvariantCulture)}' FROM Produtos WHERE Id = '{id}';");
         }
 
-        //public static List<Venda> CarregarVendas(Venda venda)
-        //{ }
+        public static List<Venda> CarregarVendas()
+        {
+            using (var Leitor = bancoDeDados.ExecuteQuery("SELECT * FROM Vendas"))
+            {
+                List<Venda> VendasBD = new List<Venda>();
+
+                while (Leitor.Read())
+                {
+                    VendasBD.Add(new Venda(Leitor.GetInt32(0), Leitor.GetString(2), Leitor.GetString(3), Leitor.GetInt32(4), Leitor.GetDouble(5), Leitor.GetDouble(6)));
+                }
+
+                return VendasBD;
+            }
+        }
     }
 }

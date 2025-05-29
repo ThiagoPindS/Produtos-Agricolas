@@ -37,7 +37,7 @@
             lblId = new Label();
             txtId = new TextBox();
             txtNome = new TextBox();
-            txtPreco = new TextBox();
+            txtPrecoUnitario = new TextBox();
             btnBuscar = new Button();
             txtQuantidadeDisponivel = new TextBox();
             lblQuantidadeVenda = new Label();
@@ -124,15 +124,15 @@
             txtNome.TabIndex = 21;
             txtNome.Text = "Nome: Insira um ID";
             // 
-            // txtPreco
+            // txtPrecoUnitario
             // 
-            txtPreco.Font = new Font("Segoe UI", 11F);
-            txtPreco.Location = new Point(127, 135);
-            txtPreco.Name = "txtPreco";
-            txtPreco.ReadOnly = true;
-            txtPreco.Size = new Size(245, 27);
-            txtPreco.TabIndex = 22;
-            txtPreco.Text = "Preço: Insira um ID";
+            txtPrecoUnitario.Font = new Font("Segoe UI", 11F);
+            txtPrecoUnitario.Location = new Point(127, 135);
+            txtPrecoUnitario.Name = "txtPrecoUnitario";
+            txtPrecoUnitario.ReadOnly = true;
+            txtPrecoUnitario.Size = new Size(245, 27);
+            txtPrecoUnitario.TabIndex = 22;
+            txtPrecoUnitario.Text = "Preço: Insira um ID";
             // 
             // btnBuscar
             // 
@@ -225,7 +225,7 @@
             txtTotal.TabIndex = 30;
             txtTotal.Text = "Total";
             // 
-            // Venda
+            // Vender
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -239,13 +239,13 @@
             Controls.Add(lblQuantidadeVenda);
             Controls.Add(txtQuantidadeDisponivel);
             Controls.Add(btnBuscar);
-            Controls.Add(txtPreco);
+            Controls.Add(txtPrecoUnitario);
             Controls.Add(txtNome);
             Controls.Add(lblId);
             Controls.Add(txtId);
             Controls.Add(btnConfirmarVenda);
             Controls.Add(menuStrip1);
-            Name = "Venda";
+            Name = "Vender";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Venda";
             menuStrip1.ResumeLayout(false);
@@ -266,7 +266,7 @@
         private Label lblId;
         public TextBox txtId;
         public TextBox txtNome;
-        public TextBox txtPreco;
+        public TextBox txtPrecoUnitario;
         private Button btnBuscar;
         public TextBox txtQuantidadeDisponivel;
         private Label lblQuantidadeVenda;

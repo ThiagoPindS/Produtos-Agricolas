@@ -338,11 +338,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agrícolas\\Produtos-Agrícolas.csproj",
+      "projectUniqueName": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Produtos-Agrícolas.csproj",
       "projectName": "Produtos-Agrícolas",
-      "projectPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agrícolas\\Produtos-Agrícolas.csproj",
+      "projectPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Produtos-Agrícolas.csproj",
       "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agrícolas\\obj\\",
+      "outputPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

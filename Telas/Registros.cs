@@ -1,10 +1,16 @@
-﻿namespace Produtos_Agrícolas.Telas
+﻿using Produtos_Agrícolas.Classes;
+
+namespace Produtos_Agrícolas.Telas
 {
     public partial class Registros : Form
     {
+        private List<Venda> Vendas = new List<Venda>();
+
         public Registros()
         {
             InitializeComponent();
+
+            AtualizarDataGridView();
         }
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -19,6 +25,15 @@
             {
                 Application.Exit();
             }
+        }
+
+        private void AtualizarDataGridView()
+        {
+            Vendas = VendaService.CarregarVendas();
+
+            dgvRegistros.DataSource = "null";
+
+            dgvRegistros.DataSource = Vendas;
         }
     }
 }

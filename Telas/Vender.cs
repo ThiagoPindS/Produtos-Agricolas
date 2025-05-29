@@ -11,6 +11,8 @@ namespace Produtos_Agrícolas.Telas
         public Vender()
         {
             InitializeComponent();
+
+            CarregarDados("");
         }
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace Produtos_Agrícolas.Telas
 
                 if (resultado == DialogResult.Yes)
                 {
-                    VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), new Venda(txtNome.Text, int.Parse(txtQuantidadeVenda.Text), double.Parse(txtPreco.Text), double.Parse(txtPrecoTotal.Text)));
+                    VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), new Venda(txtNome.Text, double.Parse(txtPrecoUnitario.Text)));
 
                     CarregarDados("");
 
@@ -72,7 +74,7 @@ namespace Produtos_Agrícolas.Telas
         {
             if (txtQuantidadeVenda.Text != "")
             {
-                txtPrecoTotal.Text = (int.Parse(txtQuantidadeVenda.Text) * Estoque.Produtos[IdAtual].Preco).ToString("F2");
+                txtPrecoTotal.Text = (int.Parse(txtQuantidadeVenda.Text) * Produtos[IdAtual].Preco).ToString("F2");
             }
         }
 
@@ -81,7 +83,7 @@ namespace Produtos_Agrícolas.Telas
             txtNome.Text = Produtos[id].Nome.ToString();
             txtQuantidadeDisponivel.Text = Produtos[id].Quantidade.ToString();
             txtQuantidadeVenda.Text = "0";
-            txtPreco.Text = Produtos[id].Preco.ToString("F2");
+            txtPrecoUnitario.Text = Produtos[id].Preco.ToString("F2");
         }
 
         private void CarregarDados(string filtro)

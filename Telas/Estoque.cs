@@ -90,7 +90,7 @@ namespace Produtos_Agrícolas.Telas
                     venda.txtId.Text = dgvEstoque.CurrentRow.Cells[0].Value.ToString();
                     venda.txtNome.Text = dgvEstoque.CurrentRow.Cells[1].Value.ToString();
                     venda.txtQuantidadeDisponivel.Text = dgvEstoque.CurrentRow.Cells[3].Value.ToString();
-                    venda.txtPreco.Text = dgvEstoque.CurrentRow.Cells[4].Value.ToString();
+                    venda.txtPrecoUnitario.Text = dgvEstoque.CurrentRow.Cells[4].Value.ToString();
 
                     venda.ShowDialog();
                 }
