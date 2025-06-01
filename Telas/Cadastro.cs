@@ -17,7 +17,7 @@ namespace Produtos_Agrícolas.Telas
             {
                 if (IsEdicao == false)
                 {
-                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text.ToUpper().Trim(), cmbCategoria.Text.ToUpper().Trim(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())));
+                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())));
 
                     MessageBox.Show("Produto cadastro com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -25,7 +25,7 @@ namespace Produtos_Agrícolas.Telas
                 }
                 else
                 {
-                    ProdutoService.EditarProduto(new Produto(txtNome.Text, cmbCategoria.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text)), Estoque.IdAtual);
+                    ProdutoService.EditarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())), Estoque.IdAtual);
 
                     MessageBox.Show("Produto atualizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     

@@ -2,22 +2,22 @@
 {
     public class Venda
     {
-        private int _id;
+        private int _produtoId;
         private string _nome;
         private string _data;
-        private int _quantidade;
         private double _precoUnitario;
+        private int _quantidade;
         private double _precoTotal;
 
-        public int Id
+        public int ProdutoId
         {
-            get { return _id; }
+            get { return _produtoId; }
 
             set
             {
                 if (value > 0)
                 {
-                    _id = value;
+                    _produtoId = value;
                 }
                 else
                 {
@@ -60,23 +60,6 @@
             }
         }
 
-        public int Quantidade
-        {
-            get { return _quantidade; }
-
-            set
-            {
-                if (value > 0)
-                {
-                    _quantidade = value;
-                }
-                else
-                {
-                    MessageBox.Show("Quantidade da venda não encontrada", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
         public double PrecoUnitario
         {
             get { return _precoUnitario; }
@@ -90,6 +73,23 @@
                 else
                 {
                     MessageBox.Show("Preço da unidade não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public int Quantidade
+        {
+            get { return _quantidade; }
+
+            set
+            {
+                if (value > 0)
+                {
+                    _quantidade = value;
+                }
+                else
+                {
+                    MessageBox.Show("Quantidade da venda não encontrada", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -111,13 +111,13 @@
             }
         }
 
-        public Venda(int id, string nome, string data, int quantidade, double precoUnitario, double precoTotal)
+        public Venda(int produtoId, string data, string nome, double precoUnitario, int quantidade, double precoTotal)
         {
-            Id = id;
-            Nome = nome;
+            ProdutoId = produtoId;
             Data = data;
-            Quantidade = quantidade;
+            Nome = nome;
             PrecoUnitario = precoUnitario;
+            Quantidade = quantidade;
             PrecoTotal = precoTotal;
         }
 

@@ -49,24 +49,31 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnConfirmarVenda_Click(object sender, EventArgs e)
         {
-            if ((int.Parse(txtQuantidadeVenda.Text) > 0) && (int.Parse(txtQuantidadeDisponivel.Text) >= (int.Parse(txtQuantidadeVenda.Text))))
+            if (IdAtual > 0 && IdAtual <= Produtos.Count)
             {
-                DialogResult resultado = MessageBox.Show($"Confirma a venda de {txtQuantidadeVenda.Text} {txtNome.Text} por {txtPrecoTotal.Text} ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (resultado == DialogResult.Yes)
+                if ((int.Parse(txtQuantidadeVenda.Text) > 0) && (int.Parse(txtQuantidadeDisponivel.Text) >= (int.Parse(txtQuantidadeVenda.Text))))
                 {
-                    VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), new Venda(txtNome.Text, double.Parse(txtPrecoUnitario.Text)));
+                    DialogResult resultado = MessageBox.Show($"Confirma a venda de {txtQuantidadeVenda.Text} {txtNome.Text} por {txtPrecoTotal.Text} ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    CarregarDados("");
+                    if (resultado == DialogResult.Yes)
+                    {
+                        VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), double.Parse(txtPrecoUnitario.Text));
 
-                    CarregarProduto(IdAtual);
+                        CarregarDados("");
 
-                    MessageBox.Show("Venda realizada com sucesso", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CarregarProduto(IdAtual);
+
+                        MessageBox.Show("Venda realizada com sucesso", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("A quantidade a ser vendida não poder ser menor que 0 e nem maior do que a quantidade estocada", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show($"A quantidade a ser vendida não poder ser menor que 0 e nem maior do que a quantidade estocada", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Informe um Id válido, entre 1 e {Produtos.Count}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
