@@ -118,7 +118,7 @@ namespace Produtos_Agrícolas.Telas
         {
             Produtos = ProdutoService.CarregarProdutos(filtro);
 
-            dgvEstoque.DataSource = null;
+            dgvEstoque.Rows.Clear();
 
             foreach (Produto produto in Produtos)
             {

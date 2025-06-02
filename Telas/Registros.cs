@@ -31,7 +31,7 @@ namespace Produtos_Agrícolas.Telas
         {
             Vendas = VendaService.CarregarVendas();
 
-            dgvRegistros.DataSource = null;
+            dgvRegistros.Rows.Clear();
 
             foreach (Venda venda in Vendas)
             {
