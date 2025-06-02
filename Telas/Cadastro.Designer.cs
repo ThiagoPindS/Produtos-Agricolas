@@ -149,6 +149,7 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.Font = new Font("Segoe UI", 11F);
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Items.AddRange(new object[] { "Fruta", "Grão", "Hortaliça", "Legume" });

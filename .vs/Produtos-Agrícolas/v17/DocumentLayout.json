@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agricolas\\telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cadastro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Cadastro.cs",
+              "RelativeDocumentMoniker": "Telas\\Cadastro.cs",
+              "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Cadastro.cs [Projeto]",
+              "RelativeToolTip": "Telas\\Cadastro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T13:26:26.896Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
