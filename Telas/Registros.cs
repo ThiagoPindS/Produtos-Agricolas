@@ -31,9 +31,12 @@ namespace Produtos_Agrícolas.Telas
         {
             Vendas = VendaService.CarregarVendas();
 
-            dgvRegistros.DataSource = "null";
+            dgvRegistros.DataSource = null;
 
-            dgvRegistros.DataSource = Vendas;
+            foreach (Venda venda in Vendas)
+            {
+                dgvRegistros.Rows.Add(venda.ProdutoId, venda.Nome, venda.Data, venda.PrecoUnitario.ToString("F2"), venda.Quantidade, venda.PrecoTotal.ToString("F2"));
+            }
         }
     }
 }

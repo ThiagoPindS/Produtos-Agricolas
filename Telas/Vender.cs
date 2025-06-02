@@ -42,38 +42,44 @@ namespace Produtos_Agrícolas.Telas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            IdAtual = int.Parse(txtId.Text.Trim()) - 1;
+            if (int.Parse(txtId.Text) > 0)
+            {
+                IdAtual = int.Parse(txtId.Text.Trim()) - 1;
 
-            CarregarProduto(IdAtual);
+                CarregarProduto(IdAtual);
+
+                txtQuantidadeVenda.ReadOnly = false;
+            }
+            else
+            {
+                MessageBox.Show($"O Id deve estar entre 1 e {Produtos.Count}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConfirmarVenda_Click(object sender, EventArgs e)
         {
-            if (IdAtual > 0 && IdAtual <= Produtos.Count)
+            if ((int.Parse(txtQuantidadeVenda.Text) > 0) && (int.Parse(txtQuantidadeDisponivel.Text) >= (int.Parse(txtQuantidadeVenda.Text))))
             {
-                if ((int.Parse(txtQuantidadeVenda.Text) > 0) && (int.Parse(txtQuantidadeDisponivel.Text) >= (int.Parse(txtQuantidadeVenda.Text))))
+                DialogResult resultado = MessageBox.Show($"Confirma a venda de {txtQuantidadeVenda.Text} {txtNome.Text} por {txtPrecoTotal.Text} ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
                 {
-                    DialogResult resultado = MessageBox.Show($"Confirma a venda de {txtQuantidadeVenda.Text} {txtNome.Text} por {txtPrecoTotal.Text} ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), double.Parse(txtPrecoUnitario.Text));
 
-                    if (resultado == DialogResult.Yes)
-                    {
-                        VendaService.RegistrarVenda((IdAtual + 1), int.Parse(txtQuantidadeVenda.Text), double.Parse(txtPrecoUnitario.Text));
+                    CarregarDados("");
 
-                        CarregarDados("");
+                    CarregarProduto(IdAtual);
 
-                        CarregarProduto(IdAtual);
+                    txtQuantidadeVenda.ReadOnly = true;
 
-                        MessageBox.Show("Venda realizada com sucesso", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("A quantidade a ser vendida não poder ser menor que 0 e nem maior do que a quantidade estocada", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    LimparDados();
+
+                    MessageBox.Show("Venda realizada com sucesso", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show($"Informe um Id válido, entre 1 e {Produtos.Count}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("A quantidade a ser vendida não poder ser menor que 0 e nem maior do que a quantidade estocada", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -106,6 +112,16 @@ namespace Produtos_Agrícolas.Telas
 
                 MessageBox.Show("Digite apenas números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LimparDados()
+        {
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtPrecoUnitario.Text = "";
+            txtQuantidadeDisponivel.Text = "";
+            txtQuantidadeVenda.Text = "";
+            txtPrecoTotal.Text = "";
         }
     }
 }

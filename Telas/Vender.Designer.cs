@@ -112,7 +112,6 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(245, 27);
             txtId.TabIndex = 1;
-            txtId.Text = "0";
             txtId.KeyPress += PressionarApenasNumeros;
             // 
             // txtNome
@@ -123,7 +122,6 @@
             txtNome.ReadOnly = true;
             txtNome.Size = new Size(245, 27);
             txtNome.TabIndex = 21;
-            txtNome.Text = "Nome: Insira um ID";
             // 
             // txtPrecoUnitario
             // 
@@ -133,7 +131,6 @@
             txtPrecoUnitario.ReadOnly = true;
             txtPrecoUnitario.Size = new Size(245, 27);
             txtPrecoUnitario.TabIndex = 22;
-            txtPrecoUnitario.Text = "Preço: Insira um ID";
             // 
             // btnBuscar
             // 
@@ -154,7 +151,6 @@
             txtQuantidadeDisponivel.ReadOnly = true;
             txtQuantidadeDisponivel.Size = new Size(245, 27);
             txtQuantidadeDisponivel.TabIndex = 23;
-            txtQuantidadeDisponivel.Text = "Quantidade disponível: Insira um id";
             // 
             // lblQuantidadeVenda
             // 
@@ -171,9 +167,9 @@
             txtQuantidadeVenda.Font = new Font("Segoe UI", 11F);
             txtQuantidadeVenda.Location = new Point(127, 200);
             txtQuantidadeVenda.Name = "txtQuantidadeVenda";
+            txtQuantidadeVenda.ReadOnly = true;
             txtQuantidadeVenda.Size = new Size(245, 27);
             txtQuantidadeVenda.TabIndex = 25;
-            txtQuantidadeVenda.Text = "0";
             txtQuantidadeVenda.TextChanged += txtQuantidadeVenda_TextChanged;
             txtQuantidadeVenda.KeyPress += PressionarApenasNumeros;
             // 
@@ -185,7 +181,6 @@
             txtPrecoTotal.ReadOnly = true;
             txtPrecoTotal.Size = new Size(245, 27);
             txtPrecoTotal.TabIndex = 26;
-            txtPrecoTotal.Text = "0";
             // 
             // lblNome
             // 

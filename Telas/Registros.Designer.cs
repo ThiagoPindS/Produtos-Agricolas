@@ -29,10 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registros));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             voltarAoMenuToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvRegistros = new DataGridView();
+            IdDoProduto = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Data = new DataGridViewTextBoxColumn();
+            PrecoUnitario = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            PrecoTotal = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRegistros).BeginInit();
             SuspendLayout();
@@ -71,12 +80,73 @@
             dgvRegistros.AllowUserToResizeColumns = false;
             dgvRegistros.AllowUserToResizeRows = false;
             dgvRegistros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvRegistros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvRegistros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRegistros.Columns.AddRange(new DataGridViewColumn[] { IdDoProduto, Nome, Data, PrecoUnitario, Quantidade, PrecoTotal });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvRegistros.DefaultCellStyle = dataGridViewCellStyle2;
             dgvRegistros.Location = new Point(0, 31);
             dgvRegistros.Name = "dgvRegistros";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvRegistros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvRegistros.RowHeadersVisible = false;
             dgvRegistros.Size = new Size(1264, 650);
             dgvRegistros.TabIndex = 12;
+            // 
+            // IdDoProduto
+            // 
+            IdDoProduto.HeaderText = "ID DO PRODUTO";
+            IdDoProduto.Name = "IdDoProduto";
+            IdDoProduto.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            Nome.ReadOnly = true;
+            // 
+            // Data
+            // 
+            Data.HeaderText = "DATA";
+            Data.Name = "Data";
+            Data.ReadOnly = true;
+            // 
+            // PrecoUnitario
+            // 
+            PrecoUnitario.HeaderText = "PREÇO UNITÁRIO";
+            PrecoUnitario.Name = "PrecoUnitario";
+            PrecoUnitario.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            Quantidade.HeaderText = "QUANTIDADE";
+            Quantidade.Name = "Quantidade";
+            Quantidade.ReadOnly = true;
+            // 
+            // PrecoTotal
+            // 
+            PrecoTotal.HeaderText = "PREÇO TOTAL";
+            PrecoTotal.Name = "PrecoTotal";
+            PrecoTotal.ReadOnly = true;
             // 
             // Registros
             // 
@@ -101,5 +171,11 @@
         private ToolStripMenuItem voltarAoMenuToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private DataGridView dgvRegistros;
+        private DataGridViewTextBoxColumn IdDoProduto;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Data;
+        private DataGridViewTextBoxColumn PrecoUnitario;
+        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn PrecoTotal;
     }
 }

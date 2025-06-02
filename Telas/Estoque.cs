@@ -118,9 +118,12 @@ namespace Produtos_Agrícolas.Telas
         {
             Produtos = ProdutoService.CarregarProdutos(filtro);
 
-            dgvEstoque.DataSource = "null";
+            dgvEstoque.DataSource = null;
 
-            dgvEstoque.DataSource = Produtos;
+            foreach (Produto produto in Produtos)
+            {
+                dgvEstoque.Rows.Add(produto.Id, produto.Nome, produto.Categoria, produto.Quantidade, produto.Preco.ToString("F2"));
+            }
         }
     }
 }

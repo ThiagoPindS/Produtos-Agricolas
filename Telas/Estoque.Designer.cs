@@ -43,6 +43,11 @@
             venderToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvEstoque = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Categoria = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            Preco = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
             SuspendLayout();
@@ -155,6 +160,7 @@
             dgvEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvEstoque.ColumnHeadersHeight = 28;
             dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvEstoque.Columns.AddRange(new DataGridViewColumn[] { Id, Nome, Categoria, Quantidade, Preco });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
@@ -179,6 +185,36 @@
             dgvEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvEstoque.Size = new Size(1264, 650);
             dgvEstoque.TabIndex = 1;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "ID";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "NOME";
+            Nome.Name = "Nome";
+            Nome.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            Categoria.HeaderText = "CATEGORIA";
+            Categoria.Name = "Categoria";
+            Categoria.ReadOnly = true;
+            // 
+            // Quantidade
+            // 
+            Quantidade.HeaderText = "QUANTIDADE";
+            Quantidade.Name = "Quantidade";
+            Quantidade.ReadOnly = true;
+            // 
+            // Preco
+            // 
+            Preco.HeaderText = "PREÇO";
+            Preco.Name = "Preco";
+            Preco.ReadOnly = true;
             // 
             // Estoque
             // 
@@ -212,5 +248,10 @@
         private ToolStripMenuItem editarToolStripMenuItem;
         private ToolStripMenuItem venderToolStripMenuItem;
         private ToolStripMenuItem geralToolStripMenuItem;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Categoria;
+        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn Preco;
     }
 }
