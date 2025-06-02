@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agricolas\\telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agricolas\\telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agricolas\\telas\\vender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\vender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|c:\\users\\thiago\\source\\repos\\produtos-agricolas\\telas\\vender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\telas\\vender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E7FEC0E9-20B2-46ED-AD44-5FDF4DC3D80B}|Produtos-Agr\u00EDcolas.csproj|solutionrelative:telas\\vender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -23,27 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Estoque.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Estoque.cs",
+              "RelativeDocumentMoniker": "Telas\\Estoque.cs",
+              "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Estoque.cs",
+              "RelativeToolTip": "Telas\\Estoque.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwCwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:37:06.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Estoque.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Estoque.cs",
+              "RelativeDocumentMoniker": "Telas\\Estoque.cs",
+              "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Estoque.cs [Projeto]",
+              "RelativeToolTip": "Telas\\Estoque.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:36:55.952Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Vender.cs",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Vender.cs",
               "RelativeDocumentMoniker": "Telas\\Vender.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Vender.cs",
               "RelativeToolTip": "Telas\\Vender.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAUwFMAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwFMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T13:40:40.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Vender.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Vender.cs",
               "RelativeDocumentMoniker": "Telas\\Vender.cs",
               "ToolTip": "C:\\Users\\Thiago\\source\\repos\\Produtos-Agricolas\\Telas\\Vender.cs [Projeto]",
               "RelativeToolTip": "Telas\\Vender.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:40:30.777Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-06-02T13:40:30.777Z"
             }
           ]
         }

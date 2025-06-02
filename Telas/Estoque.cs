@@ -27,22 +27,22 @@ namespace Produtos_Agrícolas.Telas
 
         private void frutasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AtualizarDataGridView("Fruta");
+            AtualizarDataGridView("FRUTA");
         }
 
         private void grãosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AtualizarDataGridView("Grão");
+            AtualizarDataGridView("GRÃO");
         }
 
         private void hortaliçasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AtualizarDataGridView("Hortaliça");
+            AtualizarDataGridView("HORTALIÇA");
         }
 
         private void legumesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AtualizarDataGridView("Legume");
+            AtualizarDataGridView("LEGUME");
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
