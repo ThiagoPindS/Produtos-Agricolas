@@ -97,5 +97,15 @@ namespace Produtos_Agrícolas.Telas
         {
             Produtos = ProdutoService.CarregarProdutos(filtro);
         }
+
+        private void PressionarApenasNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Digite apenas números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

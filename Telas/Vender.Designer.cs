@@ -113,6 +113,7 @@
             txtId.Size = new Size(245, 27);
             txtId.TabIndex = 1;
             txtId.Text = "0";
+            txtId.KeyPress += PressionarApenasNumeros;
             // 
             // txtNome
             // 
@@ -174,6 +175,7 @@
             txtQuantidadeVenda.TabIndex = 25;
             txtQuantidadeVenda.Text = "0";
             txtQuantidadeVenda.TextChanged += txtQuantidadeVenda_TextChanged;
+            txtQuantidadeVenda.KeyPress += PressionarApenasNumeros;
             // 
             // txtPrecoTotal
             // 

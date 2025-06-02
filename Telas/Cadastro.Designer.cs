@@ -60,6 +60,7 @@
             txtQuantidade.Size = new Size(282, 27);
             txtQuantidade.TabIndex = 2;
             txtQuantidade.Text = "0";
+            txtQuantidade.KeyPress += PressionarApenasNumeros;
             // 
             // txtPreco
             // 
@@ -69,6 +70,7 @@
             txtPreco.Size = new Size(282, 27);
             txtPreco.TabIndex = 3;
             txtPreco.Text = "0";
+            txtPreco.KeyPress += PressionarApenasNumeros;
             // 
             // lblNome
             // 

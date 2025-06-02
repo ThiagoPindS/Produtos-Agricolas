@@ -28,7 +28,7 @@ namespace Produtos_Agrícolas.Telas
                     ProdutoService.EditarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())), Estoque.IdAtual);
 
                     MessageBox.Show("Produto atualizado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                     IsEdicao = false;
 
                     this.Close();
@@ -60,6 +60,16 @@ namespace Produtos_Agrícolas.Telas
         private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PressionarApenasNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MessageBox.Show("Digite apenas números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
