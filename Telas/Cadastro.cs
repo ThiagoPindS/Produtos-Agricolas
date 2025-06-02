@@ -4,26 +4,22 @@ namespace Produtos_Agrícolas.Telas
 {
     public partial class Cadastro : Form
     {
+        private List<Produto> Produtos = new List<Produto>();
+
         static public bool IsEdicao = false;
 
         public Cadastro()
         {
             InitializeComponent();
+
+            CarregarProdutos();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (txtNome.Text != "" && cmbCategoria.Text != "" && txtQuantidade.Text != "" && txtPreco.Text != "")
             {
-                if (IsEdicao == false)
-                {
-                    ProdutoService.CadastrarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())));
-
-                    MessageBox.Show("Produto cadastro com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    LimparCampos();
-                }
-                else
+                if (IsEdicao)
                 {
                     ProdutoService.EditarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())), Estoque.IdAtual);
 
@@ -33,10 +29,37 @@ namespace Produtos_Agrícolas.Telas
 
                     this.Close();
                 }
+                else
+                {
+                    bool IsNovo = true;
+
+                    foreach (Produto produto in Produtos)
+                    {
+                        if (txtNome.Text.ToUpper() == produto.Nome)
+                        {
+                            MessageBox.Show($"Já existe um produto com esse nome cadastrado, ID: {produto.Id}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            IsNovo = false;
+
+                            break;
+                        }
+                    }
+
+                    if (IsNovo == true)
+                    {
+                        ProdutoService.CadastrarProduto(new Produto(txtNome.Text.ToUpper(), cmbCategoria.Text.ToUpper(), int.Parse(txtQuantidade.Text.Trim()), double.Parse(txtPreco.Text.Trim())));
+
+                        MessageBox.Show("Produto cadastro com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        CarregarProdutos();
+
+                        LimparCampos();
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Preencha todos os dados do produto", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -70,6 +93,11 @@ namespace Produtos_Agrícolas.Telas
 
                 MessageBox.Show("Digite apenas números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CarregarProdutos()
+        {
+            Produtos = ProdutoService.CarregarProdutos("");
         }
     }
 }
